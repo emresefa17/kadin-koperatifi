@@ -233,20 +233,7 @@ hr.section-divider {
 </head>
 <body class="bg-white">
 <!-- Navbar -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-8 py-2 shadow-md transition-transform duration-300">
-  <div class="flex items-center justify-between">
-    <div class="flex items-center">
-      <a href="index.html">
-        <img 
-  src="logo.png" 
-  alt="Kadın Kooperatifi Logo" 
-  class="h-44 w-44 sm:h-16 sm:w-32 md:h-44 md:w-44 lg:h-36 lg:w-48 object-contain">
-
-      </a>
-    </div>
-    <button class="md:hidden text-secondary p-3" id="mobile-menu-btn">
-  <i class="ri-menu-line text-3xl"></i>
-</button>
+<!-- Navbar --> <nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-8 py-2 shadow-md transition-transform duration-300"> <div class="flex items-center justify-between"> <div class="flex items-center"> <a href="index.html"> <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-36 w-36 sm:h-16 sm:w-32 md:h-44 md:w-44 lg:h-36 lg:w-48 object-contain"> </a> </div> <button class="md:hidden text-secondary p-3" id="mobile-menu-btn"> <i class="ri-menu-line text-3xl"></i> </button>
 
     <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sayfa</a>
@@ -1019,6 +1006,17 @@ window.addEventListener('scroll', () => {
 window.addEventListener('scroll', () => {
     if (window.scrollY < 100) {
         navbar.style.transform = 'translateY(0)';
+    }
+});
+
+// Scroll olduğunda navbar'ın şeffaflığını ayarla
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        navbar.classList.remove('bg-white/80');
+        navbar.classList.add('bg-white');
+    } else {
+        navbar.classList.remove('bg-white');
+        navbar.classList.add('bg-white/80');
     }
 });
 </script>
