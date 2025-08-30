@@ -139,35 +139,41 @@ hr.section-divider {
 </head>
 <body class="bg-white">
 <!-- Navbar -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-secondary px-4 md:px-8 py-3 md:py-4">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-8 py-2 shadow-md transition-transform duration-300">
   <div class="flex items-center justify-between">
-    <div class="text-white font-['Pacifico'] text-lg md:text-2xl">
-      <a href="index.html">Kadın Kooperatifi</a>
+    <div class="flex items-center">
+      <a href="index.html">
+        <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-20 w-40 md:h-36 md:w-48 object-contain">
+      </a>
     </div>
-    <button class="md:hidden text-white" id="mobile-menu-btn">
+    <button class="md:hidden text-secondary" id="mobile-menu-btn">
       <i class="ri-menu-line text-xl md:text-2xl"></i>
     </button>
     <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
-      <a href="index.html" class="text-white hover:text-purple-soft transition-colors font-medium text-sm lg:text-base">Ana Sayfa</a>
-      <a href="hakkimizda.html" class="text-white hover:text-purple-soft transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
-      <a href="galeri.html" class="text-white hover:text-purple-soft transition-colors font-medium text-sm lg:text-base">Galeri</a>
-      <a href="lokanta.html" class="text-white hover:text-purple-soft transition-colors font-medium text-sm lg:text-base">Lokanta</a>
-      <a href="iletisim.html" class="text-white hover:text-purple-soft transition-colors font-medium text-sm lg:text-base">İletişim</a>
+      <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sayfa</a>
+      <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
+      <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Galeri</a>
+      <a href="anasinifi.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sınıfı</a>
+      <a href="lokanta.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Lokanta</a>
+      <a href="ecekoy.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Eceköy</a>
+      <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">İletişim</a>
     </div>
-    <button class="hidden md:block bg-white text-secondary px-4 md:px-6 py-2 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap text-sm lg:text-base">
+    <button class="hidden md:block bg-primary text-white px-4 md:px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap text-sm lg:text-base">
       Üye Ol
     </button>
   </div>
   
   <!-- Mobil menü -->
-  <div class="hidden md:hidden bg-secondary absolute top-full left-0 right-0 border-t border-white/20" id="mobile-menu">
+  <div class="hidden md:hidden bg-white absolute top-full left-0 right-0 border-t border-gray-200" id="mobile-menu">
     <div class="flex flex-col space-y-4 p-4">
-      <a href="index.html" class="text-white hover:text-purple-soft transition-colors font-medium py-2">Ana Sayfa</a>
-      <a href="hakkimizda.html" class="text-white hover:text-purple-soft transition-colors font-medium py-2">Hakkımızda</a>
-      <a href="galeri.html" class="text-white hover:text-purple-soft transition-colors font-medium py-2">Galeri</a>
-      <a href="lokanta.html" class="text-white hover:text-purple-soft transition-colors font-medium py-2">Lokanta</a>
-      <a href="iletisim.html" class="text-white hover:text-purple-soft transition-colors font-medium py-2">İletişim</a>
-      <button class="bg-white text-secondary px-6 py-2 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap mt-2">
+      <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sayfa</a>
+      <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Hakkımızda</a>
+      <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Galeri</a>
+      <a href="anasinifi.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sınıfı</a>
+      <a href="lokanta.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Lokanta</a>
+      <a href="ecekoy.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Eceköy</a>
+      <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">İletişim</a>
+      <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap mt-2">
         Üye Ol
       </button>
     </div>
@@ -624,6 +630,34 @@ document.addEventListener('DOMContentLoaded', function() {
   animatedElements.forEach(el => {
     observer.observe(el);
   });
+});
+</script>
+<script>
+let lastScrollTop = 0;
+const navbar = document.querySelector('nav');
+let isScrollingDown = false;
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop && !isScrollingDown && scrollTop > 100) {
+        // Aşağı scroll
+        navbar.style.transform = 'translateY(-100%)';
+        isScrollingDown = true;
+    } else if (scrollTop < lastScrollTop && isScrollingDown) {
+        // Yukarı scroll
+        navbar.style.transform = 'translateY(0)';
+        isScrollingDown = false;
+    }
+    
+    lastScrollTop = scrollTop;
+});
+
+// Sayfanın en üstünde navbar'ı her zaman göster
+window.addEventListener('scroll', () => {
+    if (window.scrollY < 100) {
+        navbar.style.transform = 'translateY(0)';
+    }
 });
 </script>
 </body>
