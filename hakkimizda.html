@@ -139,15 +139,43 @@ hr.section-divider {
 </head>
 <body class="bg-white">
 <!-- Navbar -->
-<!-- Navbar --> <nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-8 py-2 shadow-md transition-transform duration-300"> <div class="flex items-center justify-between"> <div class="flex items-center"> <a href="index.html"> <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-36 w-36 sm:h-16 sm:w-32 md:h-44 md:w-44 lg:h-36 lg:w-48 object-contain"> </a> </div> <button class="md:hidden text-secondary p-3" id="mobile-menu-btn"> <i class="ri-menu-line text-3xl"></i> </button>
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-6 py-1 shadow-md transition-transform duration-300">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center">
+      <a href="index.html">
+        <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-24 w-auto object-contain">
+      </a>
+    </div>
+    <button class="md:hidden text-secondary p-3" id="mobile-menu-btn">
+      <i class="ri-menu-line text-3xl"></i>
+    </button>
 
     <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sayfa</a>
       <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
       <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Galeri</a>
-      <a href="anasinifi.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Özel Biga Anaokulu</a>
-      <a href="Bikad Mutfak.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Bikad Mutfak</a>
-      <a href="ecekoy.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Eceköy</a>
+      
+      <!-- Kuruluşlarımız Dropdown -->
+      <div class="relative group">
+        <button class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base flex items-center space-x-1">
+          <span>Kuruluşlarımız</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200 group-hover:rotate-180"></i>
+        </button>
+        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div class="py-2">
+            <a href="anasinifi.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+            </a>
+            <a href="lokanta.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-restaurant-line mr-2"></i>Lokanta
+            </a>
+            <a href="ecekoy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-home-4-line mr-2"></i>Eceköy
+            </a>
+          </div>
+        </div>
+      </div>
+      
       <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">İletişim</a>
     </div>
     <button class="hidden md:block bg-primary text-white px-4 md:px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap text-sm lg:text-base">
@@ -161,9 +189,26 @@ hr.section-divider {
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sayfa</a>
       <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Hakkımızda</a>
       <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Galeri</a>
-      <a href="anasinifi.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Özel Biga Anaokulu</a>
-      <a href="Bikad Mutfak.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Bikad Mutfak</a>
-      <a href="ecekoy.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Eceköy</a>
+      
+      <!-- Mobile Kuruluşlarımız Dropdown -->
+      <div class="mobile-dropdown">
+        <button class="text-secondary hover:text-primary transition-colors font-medium py-2 flex items-center justify-between w-full" id="mobile-dropdown-btn">
+          <span>Kuruluşlarımız</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200" id="mobile-dropdown-arrow"></i>
+        </button>
+        <div class="hidden ml-4 mt-2 space-y-2" id="mobile-dropdown-content">
+          <a href="anasinifi.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+          </a>
+          <a href="lokanta.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-restaurant-line mr-2"></i>Lokanta
+          </a>
+          <a href="ecekoy.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-home-4-line mr-2"></i>Eceköy
+          </a>
+        </div>
+      </div>
+      
       <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">İletişim</a>
       <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap mt-2">
         Üye Ol
@@ -172,14 +217,14 @@ hr.section-divider {
   </div>
 </nav>
 
-<!-- Hero section -->
+<!-- Hero section kısmında başlık değişikliği -->
 <section class="about-hero min-h-[60vh] flex items-center relative pt-16 md:pt-20 animate-on-scroll">
   <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/60 to-transparent"></div>
   <div class="relative z-10 w-full px-4 sm:px-6 md:px-8">
     <div class="max-w-7xl mx-auto">
       <div class="w-full max-w-3xl text-center md:text-left">
         <h1 class="text-white font-['Playfair_Display'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 md:mb-8 fade-in-up delay-100">
-          Hakkımızda
+          Tarihimiz
         </h1>
         <p class="text-white/90 text-base sm:text-lg md:text-xl mb-8 fade-in-up delay-150 max-w-2xl mx-auto md:mx-0">
           Kadınların gücünü ve dayanışmasını eyleme dönüştürüyor, toplumda kalıcı değişim yaratıyoruz.
@@ -233,38 +278,22 @@ hr.section-divider {
       Tarihçemiz
     </h2>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="text-center animate-on-scroll">
-        <div class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span class="text-2xl font-bold text-primary">2018</span>
-        </div>
-        <h3 class="text-xl font-['Playfair_Display'] font-bold mb-3">Kuruluş</h3>
-        <p class="text-gray-600 text-sm">Kadın Kooperatifi, 15 kadının bir araya gelmesiyle kuruldu. İlk adımlar atıldı.</p>
-      </div>
-
-      <div class="text-center animate-on-scroll">
-        <div class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span class="text-2xl font-bold text-primary">2020</span>
-        </div>
-        <h3 class="text-xl font-['Playfair_Display'] font-bold mb-3">İlk Projeler</h3>
-        <p class="text-gray-600 text-sm">Eğitim programları ve el sanatları atölyeleri başlatıldı. 50 kadına ulaşıldı.</p>
-      </div>
-
-      <div class="text-center animate-on-scroll">
-        <div class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span class="text-2xl font-bold text-primary">2022</span>
-        </div>
-        <h3 class="text-xl font-['Playfair_Display'] font-bold mb-3">Büyüme</h3>
-        <p class="text-gray-600 text-sm">Sosyal Bikad Mutfak açıldı. Üye sayısı 200'e ulaştı. İlk satış noktaları kuruldu.</p>
-      </div>
-
-      <div class="text-center animate-on-scroll">
-        <div class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span class="text-2xl font-bold text-primary">2024</span>
-        </div>
-        <h3 class="text-xl font-['Playfair_Display'] font-bold mb-3">Bugün</h3>
-        <p class="text-gray-600 text-sm">500+ üye, 5 farklı sektörde faaliyet, 1M+ TL yıllık ciro ile güçlü bir kooperatif.</p>
-      </div>
+    <div class="text-gray-600 text-base sm:text-lg leading-relaxed space-y-6">
+      <p>
+        Biga Kadın Kooperatifi (BİKAD), 2004 yılında Çanakkale Onsekiz Mart Üniversitesi'nde düzenlenen Kadınlar Günü etkinliğinde filizlenen bir fikirle doğdu. Kadınların ekonomik yaşama katılımını artırma vizyonu, Yerel Gündem 21 Kadın Meclisi çalışmalarıyla şekillendi ve Kadın Emeğini Değerlendirme Vakfı (KEDV) desteğiyle somut adımlara dönüştü.
+      </p>
+      <p>
+        9 Mart 2005'te Biga'da kurulan BİKAD, kısa sürede kadın emeğini üretime dönüştüren güçlü bir yapıya kavuştu. İlk günlerde gönüllü kadınlar, ev mutfaklarında hazırladıkları tarhana, erişte, mantı, kuskus ve bayram tatlılarını Biga Panayırı'nda satışa sundu. Halk arasında "mantıcı kadınlar" olarak tanınan bu öncü kadınlar, kooperatifin hem sosyal hem ekonomik temellerini attı.
+      </p>
+      <p>
+        2006 yılında BİKAD, üretimin yanı sıra toplumsal faydayı büyütmek amacıyla Millî Eğitim'e bağlı Özel Biga Anaokulu'nu açtı. 3–6 yaş grubu çocuklara okul öncesi eğitim hizmeti sunan bu girişim, kooperatifin sosyal dayanışma misyonunu güçlendirdi ve kadınların yalnızca üretimde değil, eğitim alanında da iz bırakmasını sağladı.
+      </p>
+      <p>
+        2018'de BİKAD, TANAP Sosyal ve Çevresel Yatırım Programı kapsamında yürütülen "Agro-Turizm Alanında Ortak Kadın Girişimi" projesiyle kırsaldaki kadın üreticiler için yeni bir dönüm noktası yaşadı. Gümüşçay ve çevre köylerde kurulan mikro mandıralar sayesinde kadınların sütleri işlenerek katma değerli ürünlere dönüştürüldü. Bu süreçte doğallığı ve katkısız yapısıyla öne çıkan Eceköy doğal peynirleri doğdu.
+      </p>
+      <p>
+        Bugün BİKAD; yerel sütlerden üretilen peynirleri ve geleneksel ürünleri modern hijyen standartlarıyla buluştururken, aynı zamanda unlu mamullerdeki üretimini BİKAD Mutfak çatısı altında sürdürmektedir. Biga Pazaryeri'nde bulunan BİKAD Mutfak restoranı, kadın emeğini sofralara taşıyan ve yerel lezzetleri halka sunan bir buluşma noktasıdır. Kooperatif, yalnızca üretim ve satış faaliyetleriyle değil; kadınların emeklerini görünür kılan, bölge halkını yerel tatlarla buluşturan ve sosyal faydayı büyüten bütüncül bir yapı olarak yoluna devam etmektedir. Özel Biga Anaokulu'nun kesintisiz sürdürdüğü okul öncesi eğitim, bu sosyal etki alanının önemli bir parçasıdır.
+      </p>
     </div>
   </div>
 </section>
@@ -456,7 +485,7 @@ Eğitim, el sanatları ve topluluk desteği ile değişimi güçlendiriyoruz. Bi
 <h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 fade-in-left">Hızlı Bağlantılar</h3>
 <ul class="space-y-3">
 <li><a href="index.html" class="text-white/80 hover:text-white transition-colors">Ana Sayfa</a></li>
-<li><a href="Bikad Mutfak.html" class="text-white/80 hover:text-white transition-colors">Bikad Mutfak</a></li>
+<li><a href="lokanta.html" class="text-white/80 hover:text-white transition-colors">Lokanta</a></li>
 </ul>
 </div>
 <div class="space-y-6 animate-on-scroll">

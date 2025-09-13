@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarihimiz - Kadın Kooperatifi</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#553f68',    // Ana mor renk
+        secondary: '#3f2d4d',  // Koyu mor
+        accent: '#6b4f82',     // Açık mor
+        'purple-light': '#f5f3f7', // Çok açık mor (beyaz yerine)
+        'purple-cream': '#ebe7ef',  // Açık mor-krem (krem yerine)
+        'purple-pale': '#e1dcE6',   // Daha koyu mor-krem
+        'purple-soft': '#d7d0dd'    // En koyu mor-krem
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        DEFAULT: '8px',
+        'md': '12px', 
+        'lg': '16px',
+        'xl': '20px',
+        '2xl': '24px',
+        '3xl': '32px',
+        'full': '9999px',
+        'button': '8px'
+      }
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+
+/* Animasyon CSS'leri */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+hr.section-divider {
+  border: none;
+  height: 1px;
+  background-color: white;
+  margin: 0;
+  opacity: 0.2;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-6 py-1 shadow-md transition-transform duration-300">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center">
+      <a href="index.html">
+        <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-24 w-auto object-contain">
+      </a>
+    </div>
+    <button class="md:hidden text-secondary p-3" id="mobile-menu-btn">
+      <i class="ri-menu-line text-3xl"></i>
+    </button>
+
+    <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+      <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sayfa</a>
+      <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
+      <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Galeri</a>
+      
+      <!-- Kuruluşlarımız Dropdown -->
+      <div class="relative group">
+        <button class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base flex items-center space-x-1">
+          <span>Kuruluşlarımız</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200 group-hover:rotate-180"></i>
+        </button>
+        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div class="py-2">
+            <a href="anasinifi.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+            </a>
+            <a href="lokanta.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-restaurant-line mr-2"></i>Lokanta
+            </a>
+            <a href="ecekoy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-home-4-line mr-2"></i>Eceköy
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">İletişim</a>
+    </div>
+    <button class="hidden md:block bg-primary text-white px-4 md:px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap text-sm lg:text-base">
+      Üye Ol
+    </button>
+  </div>
+  
+  <!-- Mobil menü -->
+  <div class="hidden md:hidden bg-white absolute top-full left-0 right-0 border-t border-gray-200" id="mobile-menu">
+    <div class="flex flex-col space-y-4 p-4">
+      <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sayfa</a>
+      <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Hakkımızda</a>
+      <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Galeri</a>
+      
+      <!-- Mobile Kuruluşlarımız Dropdown -->
+      <div class="mobile-dropdown">
+        <button class="text-secondary hover:text-primary transition-colors font-medium py-2 flex items-center justify-between w-full" id="mobile-dropdown-btn">
+          <span>Kuruluşlarımız</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200" id="mobile-dropdown-arrow"></i>
+        </button>
+        <div class="hidden ml-4 mt-2 space-y-2" id="mobile-dropdown-content">
+          <a href="anasinifi.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+          </a>
+          <a href="lokanta.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-restaurant-line mr-2"></i>Lokanta
+          </a>
+          <a href="ecekoy.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-home-4-line mr-2"></i>Eceköy
+          </a>
+        </div>
+      </div>
+      
+      <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">İletişim</a>
+      <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap mt-2">
+        Üye Ol
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section - Görseldeki tasarım -->
+<section class="pt-32 md:pt-40 pb-16 md:pb-24 px-4 sm:px-6 md:px-8 bg-purple-cream">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+      <!-- Sol Taraf - Başlık -->
+      <div class="animate-on-scroll fade-in-left">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Playfair_Display'] font-bold text-secondary leading-tight mb-6">
+          Daha İyi Bir<br>Yarın İçin
+        </h1>
+        <p class="text-gray-600 text-lg md:text-xl leading-relaxed">
+          Kadınların gücünü ve dayanışmasını eyleme dönüştürüyor, toplumda kalıcı değişim yaratıyoruz.
+        </p>
+      </div>
+      
+      <!-- Sağ Taraf - Tarihimiz içeriği -->
+      <div class="animate-on-scroll fade-in-right">
+        <div class="text-gray-600 text-base sm:text-lg leading-relaxed space-y-4">
+          <p>
+            Biga Kadın Kooperatifi (BİKAD), 2004 yılında Çanakkale Onsekiz Mart Üniversitesi'nde düzenlenen Kadınlar Günü etkinliğinde filizlenen bir fikirle doğdu. Kadınların ekonomik yaşama katılımını artırma vizyonu, Yerel Gündem 21 Kadın Meclisi çalışmalarıyla şekillendi ve Kadın Emeğini Değerlendirme Vakfı (KEDV) desteğiyle somut adımlara dönüştü.
+          </p>
+          <p>
+            9 Mart 2005'te Biga'da kurulan BİKAD, kısa sürede kadın emeğini üretime dönüştüren güçlü bir yapıya kavuştu. İlk günlerde gönüllü kadınlar, ev mutfaklarında hazırladıkları tarhana, erişte, mantı, kuskus ve bayram tatlılarını Biga Panayırı'nda satışa sundu. Halk arasında "mantıcı kadınlar" olarak tanınan bu öncü kadınlar, kooperatifin hem sosyal hem ekonomik temellerini attı.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Yeni Section - İçerik solda, başlık sağda -->
+<section class="py-16 md:py-24 px-4 sm:px-6 md:px-8 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+      <!-- Sol Taraf - İçerik yazısı -->
+      <div class="animate-on-scroll fade-in-left">
+        <div class="text-gray-600 text-base sm:text-lg leading-relaxed space-y-4">
+          <p>
+            2006 yılında BİKAD, üretimin yanı sıra toplumsal faydayı büyütmek amacıyla Millî Eğitim'e bağlı Özel Biga Anaokulu'nu açtı. 3–6 yaş grubu çocuklara okul öncesi eğitim hizmeti sunan bu girişim, kooperatifin sosyal dayanışma misyonunu güçlendirdi ve kadınların yalnızca üretimde değil, eğitim alanında da iz bırakmasını sağladı.
+          </p>
+          <p>
+            2018'de BİKAD, TANAP Sosyal ve Çevresel Yatırım Programı kapsamında yürütülen "Agro-Turizm Alanında Ortak Kadın Girişimi" projesiyle kırsaldaki kadın üreticiler için yeni bir dönüm noktası yaşadı. Gümüşçay ve çevre köylerde kurulan mikro mandıralar sayesinde kadınların sütleri işlenerek katma değerli ürünlere dönüştürüldü. Bu süreçte doğallığı ve katkısız yapısıyla öne çıkan Eceköy doğal peynirleri doğdu.
+          </p>
+          <p>
+            Bugün BİKAD; yerel sütlerden üretilen peynirleri ve geleneksel ürünleri modern hijyen standartlarıyla buluştururken, aynı zamanda unlu mamullerdeki üretimini BİKAD Mutfak çatısı altında sürdürmektedir. Biga Pazaryeri'nde bulunan BİKAD Mutfak restoranı, kadın emeğini sofralara taşıyan ve yerel lezzetleri halka sunan bir buluşma noktasıdır.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Sağ Taraf - Büyük başlıklı yazı -->
+      <div class="animate-on-scroll fade-in-right">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Playfair_Display'] font-bold text-secondary leading-tight mb-6">
+          Tarihimiz &<br>Hedefimiz
+        </h2>
+        <p class="text-gray-600 text-lg md:text-xl leading-relaxed">
+          Kadın emeğini değere dönüştürerek toplumsal kalkınmaya katkı sağlıyoruz.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quote Section -->
+<section class="py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-purple-cream">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="relative">
+      <span class="absolute text-8xl md:text-9xl text-primary/20 -top-6 -left-4 md:-left-8 font-serif">"</span>
+      <blockquote class="text-2xl md:text-3xl lg:text-4xl font-['Playfair_Display'] font-medium text-secondary leading-relaxed italic relative z-10 px-8 md:px-16">
+        Our mission is to create a lasting impact by driving real change and improving lives.
+      </blockquote>
+      <span class="absolute text-8xl md:text-9xl text-primary/20 -bottom-12 -right-4 md:-right-8 font-serif transform rotate-180">"</span>
+    </div>
+  </div>
+</section>
+
+<!-- Vizyonumuz & Misyonumuz Section -->
+<section class="py-16 md:py-24 px-4 sm:px-6 md:px-8 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+      <!-- Sol Taraf - Resim -->
+      <div class="animate-on-scroll fade-in-left">
+        <div class="bg-gray-10 w-full">
+          <!-- Buraya resim ekleyin -->
+          <img src="logo.png " alt="Vizyon ve Misyon" class="w-full h-full object-cover">
+        </div>
+      </div>
+      
+      <!-- Sağ Taraf - Vizyon ve Misyon -->
+      <div class="animate-on-scroll fade-in-right space-y-12">
+        <!-- Vizyonumuz -->
+        <div class="relative pl-20">
+          <div class="absolute left-0 top-0 w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center text-2xl font-bold text-white">01</div>
+          <h3 class="text-2xl md:text-3xl font-['Playfair_Display'] font-bold text-secondary mb-4">Vizyonumuz</h3>
+          <p class="text-gray-600 leading-relaxed">
+            We envision a world where every individual has access to basic needs, opportunities, and a brighter future. Our mission is to create lasting change through compassionate actions, working together to improve lives, one community at a time.
+          </p>
+        </div>
+        
+        <!-- Misyonumuz -->
+        <div class="relative pl-20">
+          <div class="absolute left-0 top-0 w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center text-2xl font-bold text-white">02</div>
+          <h3 class="text-2xl md:text-3xl font-['Playfair_Display'] font-bold text-secondary mb-4">Misyonumuz</h3>
+          <p class="text-gray-600 leading-relaxed">
+            We believe in the power of collaboration and sustainable solutions. By combining resources, volunteer efforts, and community-driven initiatives, we ensure that every project creates a positive, long-term impact.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-secondary text-white py-12 md:py-16 px-4 sm:px-6 md:px-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+    <div>
+      <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-24 w-24 object-contain mb-4">
+      <p class="text-white/80 text-sm leading-relaxed">
+        Kadınların ekonomik bağımsızlığını sağlamak, sosyal güçlenmelerini desteklemek ve toplumsal dayanışmayı güçlendirmek için çalışıyoruz.
+      </p>
+    </div>
+    
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Hızlı Bağlantılar</h3>
+      <ul class="space-y-2">
+        <li><a href="index.html" class="text-white/80 hover:text-white transition-colors text-sm">Ana Sayfa</a></li>
+        <li><a href="hakkimizda.html" class="text-white/80 hover:text-white transition-colors text-sm">Hakkımızda</a></li>
+        <li><a href="galeri.html" class="text-white/80 hover:text-white transition-colors text-sm">Galeri</a></li>
+        <li><a href="anasinifi.html" class="text-white/80 hover:text-white transition-colors text-sm">Ana Sınıfı</a></li>
+        <li><a href="lokanta.html" class="text-white/80 hover:text-white transition-colors text-sm">Lokanta</a></li>
+        <li><a href="ecekoy.html" class="text-white/80 hover:text-white transition-colors text-sm">Eceköy</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h3 class="text-lg font-semibold mb-4">İletişim</h3>
+      <ul class="space-y-2">
+        <li class="flex items-start">
+          <i class="ri-map-pin-line text-primary mr-2 mt-1"></i>
+          <span class="text-white/80 text-sm">İstiklal Mah. Zübeyde Hanım Cad. No:27, Biga/Çanakkale</span>
+        </li>
+        <li class="flex items-center">
+          <i class="ri-phone-line text-primary mr-2"></i>
+          <span class="text-white/80 text-sm">+90 286 316 1122</span>
+        </li>
+        <li class="flex items-center">
+          <i class="ri-mail-line text-primary mr-2"></i>
+          <span class="text-white/80 text-sm">info@bikad.org</span>
+        </li>
+      </ul>
+    </div>
+    
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Bizi Takip Edin</h3>
+      <div class="flex space-x-4">
+        <a href="#" class="bg-white/10 hover:bg-white/20 transition-colors w-10 h-10 rounded-full flex items-center justify-center">
+          <i class="ri-facebook-fill text-white"></i>
+        </a>
+        <a href="#" class="bg-white/10 hover:bg-white/20 transition-colors w-10 h-10 rounded-full flex items-center justify-center">
+          <i class="ri-instagram-line text-white"></i>
+        </a>
+        <a href="#" class="bg-white/10 hover:bg-white/20 transition-colors w-10 h-10 rounded-full flex items-center justify-center">
+          <i class="ri-twitter-x-line text-white"></i>
+        </a>
+        <a href="#" class="bg-white/10 hover:bg-white/20 transition-colors w-10 h-10 rounded-full flex items-center justify-center">
+          <i class="ri-youtube-line text-white"></i>
+        </a>
+      </div>
+      <div class="mt-6">
+        <h4 class="text-sm font-semibold mb-2">Bültenimize Abone Olun</h4>
+        <div class="flex">
+          <input type="email" placeholder="E-posta adresiniz" class="bg-white/10 text-white placeholder:text-white/50 px-3 py-2 rounded-l-md text-sm flex-1 focus:outline-none focus:ring-1 focus:ring-primary">
+          <button class="bg-primary hover:bg-primary/90 transition-colors px-3 py-2 rounded-r-md text-sm">
+            <i class="ri-send-plane-line"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/10 text-center text-white/60 text-xs">
+    <p> 2024 Biga Kadın Kooperatifi. Tüm hakları saklıdır.</p>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  // Mobil menü toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+  
+  // Scroll animasyonları
+  const animateOnScroll = () => {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    
+    elements.forEach(element => {
+      const elementPosition = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (elementPosition < windowHeight - 100) {
+        element.classList.add('animate');
+      }
+    });
+  };
+  
+  window.addEventListener('scroll', animateOnScroll);
+  window.addEventListener('load', animateOnScroll);
+  
+  // Navbar scroll efekti
+  const navbar = document.querySelector('nav');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('bg-white', 'shadow-md');
+    } else {
+      navbar.classList.remove('shadow-md');
+    }
+  });
+</script>
+</body>
+</html>

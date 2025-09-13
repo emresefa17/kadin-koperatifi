@@ -233,16 +233,43 @@ hr.section-divider {
 </head>
 <body class="bg-white">
 <!-- Navbar -->
-<!-- Navbar --> <nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-8 py-2 shadow-md transition-transform duration-300"> <div class="flex items-center justify-between"> <div class="flex items-center"> <a href="index.html"> <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-36 w-36 sm:h-16 sm:w-32 md:h-44 md:w-44 lg:h-36 lg:w-48 object-contain"> </a> </div> <button class="md:hidden text-secondary p-3" id="mobile-menu-btn"> <i class="ri-menu-line text-3xl"></i> </button>
-="ri-menu-line text-3xl"></i>
-</button>
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-6 py-1 shadow-md transition-transform duration-300">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center">
+      <a href="index.html">
+        <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-24 w-auto object-contain">
+      </a>
+    </div>
+    <button class="md:hidden text-secondary p-3" id="mobile-menu-btn">
+      <i class="ri-menu-line text-3xl"></i>
+    </button>
+
     <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sayfa</a>
       <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
       <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Galeri</a>
-      <a href="anasinifi.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Özel Biga Anaokulu</a>
-      <a href="Bikad Mutfak.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Bikad Mutfak</a>
-      <a href="ecekoy.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Eceköy</a>
+      
+      <!-- Kuruluşlarımız Dropdown -->
+      <div class="relative group">
+        <button class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base flex items-center space-x-1">
+          <span>Kuruluşlarımız</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200 group-hover:rotate-180"></i>
+        </button>
+        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div class="py-2">
+            <a href="anasinifi.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+            </a>
+            <a href="lokanta.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-restaurant-line mr-2"></i>Lokanta
+            </a>
+            <a href="ecekoy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-home-4-line mr-2"></i>Eceköy
+            </a>
+          </div>
+        </div>
+      </div>
+      
       <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">İletişim</a>
     </div>
     <button class="hidden md:block bg-primary text-white px-4 md:px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap text-sm lg:text-base">
@@ -256,9 +283,26 @@ hr.section-divider {
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sayfa</a>
       <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Hakkımızda</a>
       <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Galeri</a>
-      <a href="anasinifi.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Özel Biga Anaokulu</a>
-      <a href="Bikad Mutfak.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Bikad Mutfak</a>
-      <a href="ecekoy.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Eceköy</a>
+      
+      <!-- Mobile Kuruluşlarımız Dropdown -->
+      <div class="mobile-dropdown">
+        <button class="text-secondary hover:text-primary transition-colors font-medium py-2 flex items-center justify-between w-full" id="mobile-dropdown-btn">
+          <span>Kuruluşlarımız</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200" id="mobile-dropdown-arrow"></i>
+        </button>
+        <div class="hidden ml-4 mt-2 space-y-2" id="mobile-dropdown-content">
+          <a href="anasinifi.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+          </a>
+          <a href="lokanta.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-restaurant-line mr-2"></i>Lokanta
+          </a>
+          <a href="ecekoy.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-home-4-line mr-2"></i>Eceköy
+          </a>
+        </div>
+      </div>
+      
       <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">İletişim</a>
       <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap mt-2">
         Üye Ol
@@ -303,7 +347,7 @@ hr.section-divider {
 
     <div class="mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
       <div class="relative animate-on-scroll order-2 lg:order-1">
-        <img src="https://readdy.ai/api/search-image?query=traditional%20turkish%20village%20house%20with%20garden%20and%20flowers%20rural%20setting%20natural%20lighting%20peaceful%20atmosphere%20eceköy%20village%20scene&width=600&height=700&seq=ecekoy-about&orientation=portrait"
+        <img src="img/ecekoy6.jpg"
         alt="Eceköy Village"
         class="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover object-top rounded-lg shadow-xl fade-in-left">
       </div>
@@ -351,7 +395,7 @@ hr.section-divider {
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
       <div class="bg-white rounded-lg overflow-hidden shadow-lg animate-on-scroll">
-        <img src="https://readdy.ai/api/search-image?query=women%20working%20in%20garden%20planting%20vegetables%20organic%20farming%20rural%20setting%20natural%20lighting&width=400&height=300&seq=ecekoy1&orientation=landscape"
+        <img src="img/ecekoy1.jpg"
           alt="Sürdürülebilir Tarım"
           class="w-full h-48 sm:h-56 md:h-64 object-cover fade-in-right">
         <div class="p-4 sm:p-6">
@@ -372,7 +416,7 @@ hr.section-divider {
       </div>
 
       <div class="bg-white rounded-lg overflow-hidden shadow-lg animate-on-scroll">
-        <img src="https://readdy.ai/api/search-image?query=fresh%20organic%20vegetables%20and%20fruits%20from%20village%20garden%20natural%20produce%20healthy%20food&width=400&height=300&seq=ecekoy2&orientation=landscape"
+        <img src="img/ecekoy4.jpg"
           alt="Doğal Üretim"
           class="w-full h-48 sm:h-56 md:h-64 object-cover bounce-in">
         <div class="p-4 sm:p-6">
@@ -393,7 +437,7 @@ hr.section-divider {
       </div>
 
       <div class="bg-white rounded-lg overflow-hidden shadow-lg animate-on-scroll">
-        <img src="https://readdy.ai/api/search-image?query=traditional%20village%20house%20with%20garden%20flowers%20and%20plants%20rural%20lifestyle%20peaceful%20atmosphere&width=400&height=300&seq=ecekoy3&orientation=landscape"
+        <img src="img/ecekoy5.jpg"
           alt="Köy Yaşamı"
           class="w-full h-48 sm:h-56 md:h-64 object-cover slide-in-down">
         <div class="p-4 sm:p-6">
@@ -423,31 +467,35 @@ hr.section-divider {
 <section class="py-12 md:py-20 px-4 sm:px-6 md:px-8 bg-purple-pale">
   <div class="max-w-7xl mx-auto">
     <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-6 typewriter-text">
-        "Eceköy'den Görüntüler"
-      </h2>
-      <p class="text-gray-600 text-sm sm:text-base">
-        Geleneksel köy yaşamının güzelliklerini ve doğal üretim süreçlerimizi keşfedin.
-      </p>
+      <blockquote class="text-xl sm:text-2xl md:text-3xl font-['Playfair_Display'] font-medium leading-relaxed mb-6 typewriter-text">
+        "Doğanın sunduğu en güzel hediyeler, kadınların emeğiyle hayat bulur. Eceköy'de her mevsim, her ürün bir hikaye anlatır."
+      </blockquote>
+      <cite class="text-gray-600 text-sm sm:text-base">— Eceköy Köy Yaşamı</cite>
     </div>
-    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2 sm:gap-4">
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=traditional%20turkish%20village%20with%20gardens%20and%20agricultural%20fields%20rural%20landscape%20natural%20lighting%20peaceful%20atmosphere&width=200&height=300&seq=ecekoy-gallery1&orientation=portrait" alt="Village landscape" class="w-full h-full object-cover">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/ecekoy1.jpg" alt="Village landscape" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=women%20working%20in%20garden%20planting%20vegetables%20organic%20farming%20rural%20setting%20natural%20lighting&width=200&height=300&seq=ecekoy-gallery2&orientation=portrait" alt="Women gardening" class="w-full h-full object-cover">
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/ecekoy2.jpg" alt="Women gardening" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=fresh%20organic%20vegetables%20and%20fruits%20from%20village%20garden%20natural%20produce%20healthy%20food&width=200&height=300&seq=ecekoy-gallery3&orientation=portrait" alt="Fresh produce" class="w-full h-full object-cover">
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/ecekoy3.jpg" alt="Fresh produce" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=traditional%20village%20house%20with%20garden%20flowers%20and%20plants%20rural%20lifestyle%20peaceful%20atmosphere&width=200&height=300&seq=ecekoy-gallery4&orientation=portrait" alt="Village house" class="w-full h-full object-cover">
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/ecekoy4.jpg" alt="Village house" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=community%20garden%20with%20various%20vegetables%20and%20herbs%20organic%20farming%20rural%20setting&width=200&height=300&seq=ecekoy-gallery5&orientation=portrait" alt="Community garden" class="w-full h-full object-cover">
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/ecekoy5.jpg" alt="Traditional farming" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=local%20market%20with%20fresh%20village%20produce%20organic%20vegetables%20and%20fruits%20rural%20economy&width=200&height=300&seq=ecekoy-gallery6&orientation=portrait" alt="Local market" class="w-full h-full object-cover">
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/ecekoy6.jpg" alt="Community work" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/ecekoy7.jpg" alt="Natural products" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/ecekoy8.jpg" alt="Village life" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
     </div>
   </div>
@@ -502,7 +550,7 @@ Eğitim, el sanatları ve topluluk desteği ile değişimi güçlendiriyoruz. Bi
 <li><a href="index.html" class="text-white/80 hover:text-white transition-colors">Ana Sayfa</a></li>
 <li><a href="hakkimizda.html" class="text-white/80 hover:text-white transition-colors">Hakkımızda</a></li>
 <li><a href="galeri.html" class="text-white/80 hover:text-white transition-colors">Galeri</a></li>
-<li><a href="Bikad Mutfak.html" class="text-white/80 hover:text-white transition-colors">Bikad Mutfak</a></li>
+<li><a href="lokanta.html" class="text-white/80 hover:text-white transition-colors">Lokanta</a></li>
 <li><a href="iletisim.html" class="text-white/80 hover:text-white transition-colors">İletişim</a></li>
 </ul>
 </div>

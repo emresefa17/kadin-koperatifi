@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kadın Kooperatifi - Ana Sayfa</title>
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>
@@ -41,9 +41,7 @@ tailwind.config = {
 <style>
 :where([class^="ri-"])::before { content: "\f3c2"; }
 .hero-bg {
-background-image: url('https://readdy.ai/api/search-image?query=warm%20charitable%20community%20background%20with%20children%20helping%20each%20other%20in%20a%20school%20setting%20soft%20lighting%20hopeful%20atmosphere%20brown%20and%20orange%20tones%20left%20side%20darker%20for%20text%20overlay%20right%20side%20brighter%20showing%20happy%20children%20engaging%20in%20acts%20of%20kindness%20educational%20environment&width=1920&height=800&seq=hero001&orientation=landscape');
-background-size: cover;
-background-position: center;
+/* Background image removed - using HTML img element instead */
 }
 .underline-decoration {
   text-decoration: underline;
@@ -233,21 +231,47 @@ hr.section-divider {
 </head>
 <body class="bg-white">
 <!-- Navbar -->
-<!-- Navbar --> <nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-8 py-2 shadow-md transition-transform duration-300"> <div class="flex items-center justify-between"> <div class="flex items-center"> <a href="index.html"> <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-36 w-36 sm:h-16 sm:w-32 md:h-44 md:w-44 lg:h-36 lg:w-48 object-contain"> </a> </div> <button class="md:hidden text-secondary p-3" id="mobile-menu-btn"> <i class="ri-menu-line text-3xl"></i> </button>
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-6 py-1 shadow-md transition-transform duration-300">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center">
+      <a href="index.html">
+        <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-24 w-auto object-contain">
+      </a>
+    </div> <button class="md:hidden text-secondary p-3" id="mobile-menu-btn"> <i class="ri-menu-line text-3xl"></i> </button>
 
     <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sayfa</a>
-      <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
+      <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
       <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Galeri</a>
-      <a href="anasinifi.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Özel Biga Anaokulu</a>
-      <a href="Bikad Mutfak.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Bikad Mutfak</a>
-      <a href="ecekoy.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Eceköy</a>
+      
+      <!-- Kuruluşlarımız Dropdown -->
+      <div class="relative group">
+        <button class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base flex items-center space-x-1">
+          <span>Kuruluşlarımız</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200 group-hover:rotate-180"></i>
+        </button>
+        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div class="py-2">
+            <a href="anasinifi.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+            </a>
+            <a href="lokanta.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-restaurant-line mr-2"></i>Lokanta
+            </a>
+            <a href="ecekoy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-home-4-line mr-2"></i>Eceköy
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="yonetim-kurulu.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Yönetim Kurulu</a>
       <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">İletişim</a>
-    </div>
+                </div>
     <button class="hidden md:block bg-primary text-white px-4 md:px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap text-sm lg:text-base">
       Üye Ol
     </button>
-  </div>
+            </div>
   
   <!-- Mobil menü -->
   <div class="hidden md:hidden bg-white absolute top-full left-0 right-0 border-t border-gray-200" id="mobile-menu">
@@ -255,9 +279,26 @@ hr.section-divider {
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sayfa</a>
       <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Hakkımızda</a>
       <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Galeri</a>
-      <a href="anasinifi.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Özel Biga Anaokulu</a>
-      <a href="Bikad Mutfak.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Bikad Mutfak</a>
-      <a href="ecekoy.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Eceköy</a>
+      
+      <!-- Mobile Kuruluşlarımız Dropdown -->
+      <div class="mobile-dropdown">
+        <button class="text-secondary hover:text-primary transition-colors font-medium py-2 flex items-center justify-between w-full" id="mobile-dropdown-btn">
+          <span>Kuruluşlarımız</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200" id="mobile-dropdown-arrow"></i>
+        </button>
+        <div class="hidden ml-4 mt-2 space-y-2" id="mobile-dropdown-content">
+          <a href="anasinifi.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+          </a>
+          <a href="lokanta.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-restaurant-line mr-2"></i>Lokanta
+          </a>
+          <a href="ecekoy.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-home-4-line mr-2"></i>Eceköy
+          </a>
+        </div>
+      </div>
+      
       <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">İletişim</a>
       <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap mt-2">
         Üye Ol
@@ -267,27 +308,32 @@ hr.section-divider {
 </nav>
 
 <!-- Hero section -->
-<section class="hero-bg min-h-screen flex items-center relative pt-16 md:pt-20 animate-on-scroll">
-  <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/60 to-transparent"></div>
-  <div class="relative z-10 w-full px-4 sm:px-6 md:px-8">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-      <div class="w-full md:flex-1 max-w-2xl text-center md:text-left">
-        <h1 class="text-white font-['Playfair_Display'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 md:mb-8 fade-in-up delay-100">
-          "Kadın Emeği, Birlikte Daha Güçlü"
-        </h1>
-        <p class="text-white/90 text-base sm:text-lg md:text-xl mb-8 fade-in-up delay-150 max-w-lg mx-auto md:mx-0">
-          Kadınların ekonomik güçlenmesi ve toplumsal dayanışma için çalışıyoruz.
-        </p>
-        <button class="bg-primary text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 !rounded-button font-semibold hover:bg-purple-soft/90 transition-colors whitespace-nowrap flex items-center justify-center md:justify-start mx-auto md:mx-0 fade-in-up delay-200 text-sm sm:text-base">
-          Bize Katılın
-          <i class="ri-arrow-right-line ml-2"></i>
-        </button>
-      </div>
-      <div class="hidden lg:flex flex-1 justify-end items-center relative mt-8 lg:mt-0">
-        <!-- Hero görselleri -->
-      </div>
+<section class="relative min-h-screen flex items-center pt-16 md:pt-20 animate-on-scroll overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 w-full h-full">
+        <img src="img/hero-image.jpg" 
+             alt="Hero Background" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/60 to-transparent"></div>
     </div>
-  </div>
+    
+    <!-- Content -->
+    <div class="relative z-10 w-full px-4 sm:px-6 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="w-full max-w-2xl text-center md:text-left">
+                <h1 class="text-white font-['Playfair_Display'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 md:mb-8 fade-in-up delay-100">
+                    "Kadın Emeği, Birlikte Daha Güçlü"
+                </h1>
+                <p class="text-white/90 text-base sm:text-lg md:text-xl mb-8 fade-in-up delay-150 max-w-lg mx-auto md:mx-0">
+                    Kadınların ekonomik güçlenmesi ve toplumsal dayanışma için çalışıyoruz.
+                </p>
+                <button class="bg-primary text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 !rounded-button font-semibold hover:bg-purple-soft/90 transition-colors whitespace-nowrap flex items-center justify-center md:justify-start mx-auto md:mx-0 fade-in-up delay-200 text-sm sm:text-base">
+                    Bize Katılın
+                    <i class="ri-arrow-right-line ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 </section>
 
 <hr class="section-divider">
@@ -297,7 +343,7 @@ hr.section-divider {
   <!-- Eceköy -->
   <div class="bg-purple-light rounded-lg overflow-hidden shadow-lg animate-on-scroll hover:shadow-xl transition-shadow duration-300">
     <div class="relative h-48 sm:h-56 md:h-64">
-      <img src="https://readdy.ai/api/search-image?query=traditional%20turkish%20village%20house%20with%20garden%20and%20flowers%20rural%20setting%20natural%20lighting%20peaceful%20atmosphere%20eceköy%20village%20scene&width=400&height=300&seq=ecekoy001&orientation=landscape" 
+      <img src="img/ecekoy7.jpg" 
            alt="Eceköy" 
            class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent"></div>
@@ -319,7 +365,7 @@ hr.section-divider {
   <!-- Bikad Mutfak -->
   <div class="bg-purple-light rounded-lg overflow-hidden shadow-lg animate-on-scroll hover:shadow-xl transition-shadow duration-300">
     <div class="relative h-48 sm:h-56 md:h-64">
-      <img src="https://readdy.ai/api/search-image?query=professional%20kitchen%20with%20women%20chefs%20preparing%20traditional%20turkish%20food%20modern%20equipment%20warm%20lighting%20cooking%20process%20bikad%20kitchen&width=400&height=300&seq=bikad001&orientation=landscape" 
+      <img src="img/bikad-mutfak-card.jpg" 
            alt="Bikad Mutfak" 
            class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent"></div>
@@ -331,24 +377,24 @@ hr.section-divider {
       <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
         Kadınların mutfak becerilerini profesyonel seviyeye taşıyan Bikad Mutfak, geleneksel lezzetleri modern tekniklerle buluşturarak sosyal lokanta hizmeti sunuyor.
       </p>
-      <a href="Bikad Mutfak.html" class="text-primary font-medium flex items-center hover:text-primary/80 transition-colors text-sm sm:text-base">
+      <a href="lokanta.html" class="text-primary font-medium flex items-center hover:text-primary/80 transition-colors text-sm sm:text-base">
         Detaylı Bilgi
         <i class="ri-arrow-right-line ml-1"></i>
       </a>
     </div>
-  </div>
+            </div>
 
-  <!-- Özel Özel Biga Anaokulu -->
+  <!-- Özel Ana Sınıfı -->
   <div class="bg-purple-light rounded-lg overflow-hidden shadow-lg animate-on-scroll hover:shadow-xl transition-shadow duration-300">
     <div class="relative h-48 sm:h-56 md:h-64">
-      <img src="https://readdy.ai/api/search-image?query=modern%20kindergarten%20classroom%20with%20children%20and%20teacher%20engaged%20in%20learning%20activities%20bright%20natural%20lighting%20educational%20environment%20özel%20ana%20sınıfı&width=400&height=300&seq=anasinifi001&orientation=landscape" 
-           alt="Özel Özel Biga Anaokulu" 
+      <img src="img/ana-sinifi-card.jpg" 
+           alt="Özel Ana Sınıfı" 
            class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent"></div>
       <div class="absolute bottom-4 left-4">
-        <h3 class="text-white text-xl sm:text-2xl font-['Playfair_Display'] font-bold">Özel Özel Biga Anaokulu</h3>
-      </div>
-    </div>
+        <h3 class="text-white text-xl sm:text-2xl font-['Playfair_Display'] font-bold">Özel Ana Sınıfı</h3>
+                </div>
+            </div>
     <div class="p-4 sm:p-6">
       <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
         Çocukların bireysel gelişimini destekleyen özel eğitim programlarıyla, sevgi dolu ve güvenli bir ortamda kaliteli eğitim hizmeti sunuyoruz.
@@ -357,9 +403,9 @@ hr.section-divider {
         Detaylı Bilgi
         <i class="ri-arrow-right-line ml-1"></i>
       </a>
-    </div>
-  </div>
-</section>
+            </div>
+        </div>
+    </section>
 
 <hr class="section-divider">
 
@@ -370,51 +416,46 @@ hr.section-divider {
     Her <span class="text-primary">Girişim</span>, Her <span class="text-primary">Destek</span> ve Her <span class="text-primary">Emek</span><br class="hidden sm:block">
     Umudu Büyüten ve Değişimi Mümkün Kılan<br class="hidden sm:block">
     Gücümüzdür.
-</h2>
+            </h2>
 
 <div class="mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
 <div class="relative animate-on-scroll order-2 lg:order-1">
-<img src="https://readdy.ai/api/search-image?query=friendly%20female%20volunteer%20in%20yellow%20t-shirt%20holding%20donation%20box%20in%20modern%20office%20environment%20with%20natural%20lighting%20warm%20welcoming%20smile%20professional%20setting%20with%20decorative%20elements%20and%20flowers%20in%20background&width=600&height=700&seq=volunteer001&orientation=portrait"
+<img src="img/hakkimizda.jpg"
 alt="Volunteer with donation box"
 class="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover object-top rounded-lg shadow-xl fade-in-left">
-</div>
+                </div>
 <div class="space-y-6 md:space-y-8 animate-on-scroll order-1 lg:order-2">
 <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
-    Kadınların Gücünü ve Dayanışmasını Eyleme Dönüştürüyor, Toplumda Kalıcı Değişim Yaratıyoruz. 
-    Üretici Kadınlarımız, Gönüllü Destekçilerimiz ve Sosyal Projelerimiz Sayesinde 
-    Binlerce Hayata Dokunduk, Yerel Ekonomiyi Güçlendirdik ve Kadınların Bağımsızlığını Destekleyen 
-    Önemli Girişimlere İmza Attık.
+     Biga Kadın Kooperatifi (BİKAD), 2004 yılında Çanakkale Onsekiz Mart Üniversitesi'nde düzenlenen Kadınlar Günü etkinliğinde filizlenen bir fikirle doğdu. Kadınların ekonomik yaşama katılımını artırma vizyonu, Yerel Gündem 21 Kadın Meclisi çalışmalarıyla şekillendi ve Kadın Emeğini Değerlendirme Vakfı (KEDV) desteğiyle somut adımlara dönüştü.
 </p>
 
     <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
-    Bugüne kadar 1.200'den fazla başarılı proje, 5.200 kadına ulaşım, 500+ gönüllü desteği ve 
-    milyonlarca liralık fon ile somut bir fark yaratmaya devam ediyoruz. 
-    Birlikte daha güçlü bir gelecek inşa etmek için bize katılın—her dayanışma adımı bir umut ışığıdır.
+    9 Mart 2005'te Biga'da kurulan BİKAD, kısa sürede kadın emeğini üretime dönüştüren güçlü bir yapıya kavuştu. İlk günlerde gönüllü kadınlar, ev mutfaklarında hazırladıkları tarhana, erişte, mantı, kuskus ve bayram tatlılarını Biga Panayırı'nda satışa sundu. Halk arasında "mantıcı kadınlar" olarak tanınan bu öncü kadınlar, kooperatifin hem sosyal hem ekonomik temellerini attı.
     </p>
     <div class="grid grid-cols-3 gap-4 md:gap-8 pt-6 md:pt-8">
       <div class="text-center">
         <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">5,200</div>
         <div class="text-gray-600 text-xs sm:text-sm md:text-base">Kadına Dokunduk</div>
-      </div>
+                        </div>
       <div class="text-center">
         <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">500+</div>
         <div class="text-gray-600 text-xs sm:text-sm md:text-base">Gönüllü Destekçi</div>
-      </div>
+                        </div>
       <div class="text-center">
         <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">₺12M</div>
         <div class="text-gray-600 text-xs sm:text-sm md:text-base">Toplanan Fon</div>
-      </div>
-    </div>
+                        </div>
+                    </div>
     <a href="hakkimizda.html" class="bg-primary text-white px-6 md:px-8 py-3 md:py-4 !rounded-button font-semibold hover:bg-purple-soft/90 transition-colors whitespace-nowrap flex items-center mt-6 md:mt-8 text-sm sm:text-base inline-block">
-      Hakkımızda
+                        Hakkımızda
 <div class="w-4 h-4 md:w-5 md:h-5 flex items-center justify-center ml-2">
 <i class="ri-arrow-right-line"></i>
 </div>
 </a>
-</div>
-</div>
-</div>
-</section>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <hr class="section-divider">
 
@@ -425,14 +466,14 @@ class="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover object-top rounde
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
   
         <div class="bg-white rounded-lg overflow-hidden shadow-lg animate-on-scroll">
-          <img src="https://readdy.ai/api/search-image?query=diverse%20group%20of%20children%20in%20classroom%20setting%20engaged%20in%20learning%20activities%20bright%20natural%20lighting%20educational%20environment%20with%20books%20and%20learning%20materials%20on%20desks%20positive%20atmosphere&width=400&height=300&seq=edu001&orientation=landscape"
-            alt="Anaokulu"
+          <img src="img/egitim-gelisim.jpg"
+            alt="Eğitim ve Gelişim"
             class="w-full h-48 sm:h-56 md:h-64 object-cover fade-in-right">
           <div class="p-4 sm:p-6">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2 sm:gap-0">
               <h3 class="text-xl sm:text-2xl font-['Playfair_Display'] font-bold">Eğitim ve Gelişim</h3>
               <div class="bg-orange-100 text-primary px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Topluma Hizmet</div>
-            </div>
+                    </div>
             <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
               Çocuklarımız için sevgi dolu, güvenli ve gelişim odaklı eğitim ortamları sağlıyoruz.
             </p>
@@ -440,14 +481,14 @@ class="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover object-top rounde
               Detaylı Bilgi
               <div class="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center ml-1">
                 <i class="ri-arrow-right-line"></i>
-              </div>
+                </div>
             </a>
-          </div>
-        </div>
-  
+                    </div>
+                </div>
+                
         <div class="bg-white rounded-lg overflow-hidden shadow-lg animate-on-scroll">
-          <img src="https://readdy.ai/api/search-image?query=volunteer%20feeding%20hungry%20baby%20with%20milk%20bottle%20in%20caring%20environment%20warm%20lighting%20gentle%20caring%20moment%20humanitarian%20aid%20setting&width=400&height=300&seq=feed001&orientation=landscape"
-            alt="Lokanta"
+          <img src="img/sosyal-lokanta.jpg"
+            alt="Sosyal Lokanta"
             class="w-full h-48 sm:h-56 md:h-64 object-cover bounce-in">
           <div class="p-4 sm:p-6">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2 sm:gap-0">
@@ -457,18 +498,18 @@ class="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover object-top rounde
             <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
               Kadınlarımızın emekleriyle hazırlanan sağlıklı ve lezzetli yemekler, toplumla buluşuyor.
             </p>
-            <a href="Bikad Mutfak.html" class="text-primary font-medium flex items-center hover:text-primary/80 transition-colors text-sm sm:text-base">
+            <a href="lokanta.html" class="text-primary font-medium flex items-center hover:text-primary/80 transition-colors text-sm sm:text-base">
               Detaylı Bilgi
               <div class="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center ml-1">
                 <i class="ri-arrow-right-line"></i>
               </div>
             </a>
-          </div>
+            </div>
         </div>
   
         <div class="bg-white rounded-lg overflow-hidden shadow-lg animate-on-scroll">
-          <img src="https://readdy.ai/api/search-image?query=happy%20african%20children%20in%20rural%20setting%20smiling%20and%20playing%20together%20natural%20outdoor%20environment%20community%20development%20scene%20positive%20atmosphere&width=400&height=300&seq=access001&orientation=landscape"
-            alt="Toplumsal Projeler"
+          <img src="img/toplumsal.jpg"
+            alt="Toplumsal Dayanışma"
             class="w-full h-48 sm:h-56 md:h-64 object-cover slide-in-down">
           <div class="p-4 sm:p-6">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2 sm:gap-0">
@@ -484,11 +525,11 @@ class="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover object-top rounde
                 <i class="ri-arrow-right-line"></i>
               </div>
             </a>
-          </div>
-        </div>
-  
-      </div>
-    </div>
+                    </div>
+                </div>
+                
+                    </div>
+                </div>
   </section>
 
 <hr class="section-divider">
@@ -502,31 +543,31 @@ class="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover object-top rounde
        </blockquote>
       <cite class="text-gray-600 text-sm sm:text-base">— Halide Edip Adıvar, Yazar ve Kadın Hakları Savunucusu</cite>
     </div>
-    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 sm:gap-4">
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=happy%20asian%20children%20smiling%20and%20laughing%20in%20classroom%20setting%20bright%20natural%20lighting%20educational%20environment%20joyful%20expressions&width=200&height=300&seq=gallery1&orientation=portrait" alt="Happy children" class="w-full h-full object-cover">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/galeri3.jpg" alt="Happy children" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=young%20female%20volunteer%20holding%20donation%20box%20in%20community%20center%20warm%20lighting%20caring%20expression&width=200&height=300&seq=gallery2&orientation=portrait" alt="Volunteer with donation" class="w-full h-full object-cover">
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/galeri4.jpg" alt="Volunteer with donation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=volunteers%20sorting%20food%20donations%20outdoors%20community%20service%20natural%20lighting%20teamwork&width=200&height=300&seq=gallery3&orientation=portrait" alt="Food donation" class="w-full h-full object-cover">
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/galeri5.jpg" alt="Food donation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=african%20school%20children%20in%20uniforms%20standing%20together%20rural%20setting%20natural%20lighting%20educational%20environment&width=200&height=300&seq=gallery4&orientation=portrait" alt="School children" class="w-full h-full object-cover">
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/ecekoy7.jpg" alt="School children" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=medical%20volunteers%20providing%20healthcare%20services%20to%20children%20professional%20setting%20caring%20atmosphere&width=200&height=300&seq=gallery5&orientation=portrait" alt="Healthcare services" class="w-full h-full object-cover">
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/galeri6.jpg" alt="Healthcare services" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=african%20child%20studying%20with%20focus%20expression%20educational%20setting%20natural%20lighting&width=200&height=300&seq=gallery6&orientation=portrait" alt="Child studying" class="w-full h-full object-cover">
-      </div>
-      <div class="overflow-hidden rounded-lg">
-        <img src="https://readdy.ai/api/search-image?query=diverse%20group%20of%20children%20participating%20in%20educational%20activities%20bright%20classroom%20setting%20joyful%20atmosphere&width=200&height=300&seq=gallery7&orientation=portrait" alt="Educational activities" class="w-full h-full object-cover">
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/gallery-6.jpg" alt="Child studying" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/gallery-7.jpg" alt="Educational activities" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
 
 <script id="gallery-interactions">
 document.addEventListener('DOMContentLoaded', function() {
@@ -551,12 +592,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-4">Kuruluşlarımız</h2>
 <p class="text-center text-gray-600 text-base sm:text-lg mb-8 md:mb-16">30 yıllık eğitim ve beslenme sektörlerinde profesyonel deneyim</p>
 <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 md:mb-16">
-<button class="bg-primary text-white px-4 sm:px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors text-sm sm:text-base" id="anasinifi-btn">Özel Biga Anaokulu</button>
-<button class="bg-gray-100 text-gray-600 px-4 sm:px-6 py-2 !rounded-button font-medium hover:bg-gray-200 transition-colors text-sm sm:text-base" id="lokanta-btn">Bikad Mutfak</button>
+<button class="bg-primary text-white px-4 sm:px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors text-sm sm:text-base" id="anasinifi-btn">Ana Sınıfı</button>
+<button class="bg-gray-100 text-gray-600 px-4 sm:px-6 py-2 !rounded-button font-medium hover:bg-gray-200 transition-colors text-sm sm:text-base" id="lokanta-btn">Lokanta</button>
 <button class="bg-gray-100 text-gray-600 px-4 sm:px-6 py-2 !rounded-button font-medium hover:bg-gray-200 transition-colors text-sm sm:text-base" id="ecekoy-btn">Eceköy</button>
 </div>
 
-<!-- Özel Biga Anaokulu İçerik -->
+<!-- Ana Sınıfı İçerik -->
 <div id="anasinifi-content" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
   <div class="space-y-6 md:space-y-8">
   <div class="flex items-start space-x-4 md:space-x-6">
@@ -606,10 +647,10 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
     
 <div class="grid grid-cols-2 gap-3 md:gap-4">
-<img src="https://readdy.ai/api/search-image?query=modern%20classroom%20with%20children%20and%20teacher%20engaged%20in%20interactive%20learning%20activity%20bright%20natural%20lighting%20educational%20environment%20with%20colorful%20decorations%20and%20learning%20materials&width=400&height=300&seq=service1&orientation=landscape" alt="Educational activities" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
-<img src="https://readdy.ai/api/search-image?query=diverse%20group%20of%20children%20participating%20in%20creative%20arts%20and%20crafts%20activity%20in%20modern%20classroom%20setting%20natural%20lighting%20educational%20environment&width=400&height=300&seq=service2&orientation=landscape" alt="Creative activities" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
-<img src="https://readdy.ai/api/search-image?query=children%20engaged%20in%20reading%20activity%20in%20cozy%20library%20corner%20with%20comfortable%20seating%20warm%20lighting%20educational%20setting&width=400&height=300&seq=service3&orientation=landscape" alt="Reading corner" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
-<img src="https://readdy.ai/api/search-image?query=children%20playing%20and%20learning%20with%20educational%20toys%20in%20modern%20classroom%20setting%20natural%20lighting%20developmental%20activities&width=400&height=300&seq=service4&orientation=landscape" alt="Play and learn" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
+<img src="img/ana-sinifi-1.jpg" alt="Educational activities" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
+<img src="img/ana-sinifi-2.jpg" alt="Creative activities" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
+<img src="img/ana-sinifi-3.jpg" alt="Reading corner" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
+<img src="img/ana-sinifi-4.jpg" alt="Play and learn" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
 </div>
 </div>
 
@@ -658,15 +699,15 @@ document.addEventListener('DOMContentLoaded', function() {
     <div>
     <h3 class="text-lg md:text-xl font-semibold mb-2">Sosyal Sorumluluk</h3>
     <p class="text-gray-600 text-sm sm:text-base">Topluluk yararına çalışan, kadın istihdamını destekleyen sosyal lokanta projemiz.</p>
-    </div>
-    </div>
-    </div>
-    
+                </div>
+                </div>
+            </div>
+            
 <div class="grid grid-cols-2 gap-3 md:gap-4">
-<img src="https://readdy.ai/api/search-image?query=traditional%20turkish%20restaurant%20interior%20with%20warm%20lighting%20wooden%20tables%20and%20chairs%20authentic%20atmosphere%20cozy%20dining%20environment&width=400&height=300&seq=restaurant1&orientation=landscape" alt="Restaurant interior" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
-<img src="https://readdy.ai/api/search-image?query=fresh%20homemade%20turkish%20food%20dishes%20served%20on%20traditional%20ceramic%20plates%20healthy%20organic%20ingredients%20warm%20presentation&width=400&height=300&seq=restaurant2&orientation=landscape" alt="Fresh food" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
-<img src="https://readdy.ai/api/search-image?query=chef%20preparing%20traditional%20turkish%20cuisine%20in%20professional%20kitchen%20using%20fresh%20ingredients%20cooking%20process&width=400&height=300&seq=restaurant3&orientation=landscape" alt="Chef preparing" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
-<img src="https://readdy.ai/api/search-image?query=people%20enjoying%20meal%20together%20in%20community%20restaurant%20setting%20social%20dining%20experience%20warm%20atmosphere&width=400&height=300&seq=restaurant4&orientation=landscape" alt="Community dining" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
+<img src="img/lokanta-1.jpg" alt="Restaurant interior" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
+<img src="img/lokanta-2.jpg" alt="Fresh food" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
+<img src="img/lokanta-3.jpg" alt="Chef preparing" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
+<img src="img/lokanta-4.jpg" alt="Community dining" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
 </div>
 </div>
 
@@ -700,48 +741,48 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
     <i class="ri-team-line text-primary"></i>
     </div>
-    </div>
+                </div>
     <div>
     <h3 class="text-lg md:text-xl font-semibold mb-2">Topluluk Dayanışması</h3>
     <p class="text-gray-600 text-sm sm:text-base">Köy halkının birlikte çalışarak ortak hedeflere ulaşmasını destekliyoruz.</p>
-    </div>
-    </div>
+                </div>
+                </div>
     <div class="flex items-start space-x-4 md:space-x-6">
     <div class="w-10 h-10 md:w-12 md:h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
     <div class="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
     <i class="ri-store-line text-primary"></i>
-    </div>
-    </div>
+                </div>
+                </div>
     <div>
     <h3 class="text-lg md:text-xl font-semibold mb-2">Doğal Üretim</h3>
     <p class="text-gray-600 text-sm sm:text-base">Köyde üretilen doğal ürünleri şehirle buluşturarak ekonomik değer yaratıyoruz.</p>
-    </div>
-    </div>
+                </div>
+            </div>
     </div>
     
 <div class="grid grid-cols-2 gap-3 md:gap-4">
-<img src="https://readdy.ai/api/search-image?query=traditional%20turkish%20village%20with%20gardens%20and%20agricultural%20fields%20rural%20landscape%20natural%20lighting%20peaceful%20atmosphere&width=400&height=300&seq=ecekoy1&orientation=landscape" alt="Village landscape" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
-<img src="https://readdy.ai/api/search-image?query=women%20working%20in%20garden%20planting%20vegetables%20organic%20farming%20rural%20setting%20natural%20lighting&width=400&height=300&seq=ecekoy2&orientation=landscape" alt="Women gardening" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
-<img src="https://readdy.ai/api/search-image?query=fresh%20organic%20vegetables%20and%20fruits%20from%20village%20garden%20natural%20produce%20healthy%20food&width=400&height=300&seq=ecekoy3&orientation=landscape" alt="Fresh produce" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
-<img src="https://readdy.ai/api/search-image?query=traditional%20village%20house%20with%20garden%20flowers%20and%20plants%20rural%20lifestyle%20peaceful%20atmosphere&width=400&height=300&seq=ecekoy4&orientation=landscape" alt="Village house" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
+<img src="img/ecekoy-1.jpg" alt="Village landscape" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
+<img src="img/ecekoy-2.jpg" alt="Women gardening" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
+<img src="img/ecekoy-3.jpg" alt="Fresh produce" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
+<img src="img/ecekoy-4.jpg" alt="Village house" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover rounded-lg">
 </div>
 </div>
 
 <!-- Detaylı Bilgi Butonları -->
 <div class="flex justify-center mt-8 md:mt-12">
 <a href="anasinifi.html" id="anasinifi-detail-btn" class="bg-secondary text-white px-6 sm:px-8 py-3 !rounded-button font-medium hover:bg-secondary/90 transition-colors text-sm sm:text-base">
-Detaylı Bilgi - Özel Biga Anaokulu
+Detaylı Bilgi - Ana Sınıfı
 </a>
-<a href="Bikad Mutfak.html" id="lokanta-detail-btn" class="bg-secondary text-white px-6 sm:px-8 py-3 !rounded-button font-medium hover:bg-secondary/90 transition-colors text-sm sm:text-base hidden">
-Detaylı Bilgi - Bikad Mutfak
+<a href="lokanta.html" id="lokanta-detail-btn" class="bg-secondary text-white px-6 sm:px-8 py-3 !rounded-button font-medium hover:bg-secondary/90 transition-colors text-sm sm:text-base hidden">
+Detaylı Bilgi - Lokanta
 </a>
 <a href="ecekoy.html" id="ecekoy-detail-btn" class="bg-secondary text-white px-6 sm:px-8 py-3 !rounded-button font-medium hover:bg-secondary/90 transition-colors text-sm sm:text-base hidden">
 Detaylı Bilgi - Eceköy
 </a>
 </div>
 
-</div>
-</section>
+        </div>
+    </section>
 
 <script id="services-interactions">
 document.addEventListener('DOMContentLoaded', function() {
@@ -755,7 +796,7 @@ const anasinifiDetailBtn = document.getElementById('anasinifi-detail-btn');
 const lokantaDetailBtn = document.getElementById('lokanta-detail-btn');
 const ecekoyDetailBtn = document.getElementById('ecekoy-detail-btn');
 
-// Özel Biga Anaokulu butonuna tıklandığında
+// Ana Sınıfı butonuna tıklandığında
 anasinifiBtn.addEventListener('click', function() {
 // Buton stillerini güncelle
 anasinifiBtn.classList.remove('bg-gray-100', 'text-gray-600');
@@ -870,7 +911,7 @@ Eğitim, el sanatları ve topluluk desteği ile değişimi güçlendiriyoruz. Bi
 <li><a href="index.html" class="text-white/80 hover:text-white transition-colors">Ana Sayfa</a></li>
 <li><a href="hakkimizda.html" class="text-white/80 hover:text-white transition-colors">Hakkımızda</a></li>
 <li><a href="galeri.html" class="text-white/80 hover:text-white transition-colors">Galeri</a></li>
-<li><a href="Bikad Mutfak.html" class="text-white/80 hover:text-white transition-colors">Bikad Mutfak</a></li>
+<li><a href="lokanta.html" class="text-white/80 hover:text-white transition-colors">Lokanta</a></li>
 <li><a href="iletisim.html" class="text-white/80 hover:text-white transition-colors">İletişim</a></li>
 </ul>
 </div>
@@ -927,14 +968,17 @@ Eğitim, el sanatları ve topluluk desteği ile değişimi güçlendiriyoruz. Bi
 </div>
 </div>
 </div>
-</div>
-</footer>
+        </div>
+    </footer>
 
 <!-- JavaScript -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const mobileMenuButton = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
+  const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
+  const mobileDropdownContent = document.getElementById('mobile-dropdown-content');
+  const mobileDropdownArrow = document.getElementById('mobile-dropdown-arrow');
   
   if (mobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', function() {
@@ -942,30 +986,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Navbar scroll kontrolü
-  let lastScrollY = window.scrollY;
-  const navbar = document.querySelector('nav');
+  // Mobile dropdown toggle
+  if (mobileDropdownBtn && mobileDropdownContent && mobileDropdownArrow) {
+    mobileDropdownBtn.addEventListener('click', function() {
+      mobileDropdownContent.classList.toggle('hidden');
+      mobileDropdownArrow.classList.toggle('rotate-180');
+    });
+  }
 
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY) {
-      // Aşağı scroll
-      navbar.style.transform = 'translateY(-100%)';
-    } else {
-      // Yukarı scroll
-      navbar.style.transform = 'translateY(0)';
-    }
-
-    // Sayfa en üstteyken navbar'ı göster
-    if (currentScrollY === 0) {
-      navbar.style.transform = 'translateY(0)';
-    }
-
-    lastScrollY = currentScrollY;
-  });
-
-  // Animasyonlar için geri kalan kodlar...
+  // Scroll animations
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -991,6 +1020,56 @@ document.addEventListener('DOMContentLoaded', function() {
   animatedElements.forEach(el => {
     observer.observe(el);
   });
+
+  // Gallery hover effects
+  const galleryImages = document.querySelectorAll('.overflow-hidden.rounded-lg');
+  galleryImages.forEach(image => {
+    image.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.05)';
+      this.style.transition = 'transform 0.3s ease';
+    });
+    image.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1)';
+    });
+  });
+});
+
+let lastScrollTop = 0;
+const navbar = document.querySelector('nav');
+let isScrollingDown = false;
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop && !isScrollingDown && scrollTop > 100) {
+        // Aşağı scroll
+        navbar.style.transform = 'translateY(-100%)';
+        isScrollingDown = true;
+    } else if (scrollTop < lastScrollTop && isScrollingDown) {
+        // Yukarı scroll
+        navbar.style.transform = 'translateY(0)';
+        isScrollingDown = false;
+    }
+    
+    lastScrollTop = scrollTop;
+});
+
+// Sayfanın en üstünde navbar'ı her zaman göster
+window.addEventListener('scroll', () => {
+    if (window.scrollY < 100) {
+        navbar.style.transform = 'translateY(0)';
+    }
+});
+
+// Scroll olduğunda navbar'ın şeffaflığını ayarla
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        navbar.classList.remove('bg-white/80');
+        navbar.classList.add('bg-white');
+    } else {
+        navbar.classList.remove('bg-white');
+        navbar.classList.add('bg-white/80');
+    }
 });
 </script>
 </body>
