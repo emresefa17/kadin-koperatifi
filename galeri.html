@@ -159,11 +159,30 @@ hr.section-divider {
 
     <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sayfa</a>
-      <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
+      <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
       <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Galeri</a>
-      <a href="anasinifi.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sınıfı</a>
-      <a href="lokanta.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Lokanta</a>
-      <a href="ecekoy.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Eceköy</a>
+      
+      <!-- Kuruluşlarımız Dropdown -->
+      <div class="relative group">
+        <button class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base flex items-center space-x-1">
+          <span>Kuruluşlarımız</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200 group-hover:rotate-180"></i>
+        </button>
+        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div class="py-2">
+            <a href="anasinifi.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+            </a>
+            <a href="lokanta.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-restaurant-line mr-2"></i>Lokanta
+            </a>
+            <a href="ecekoy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-home-4-line mr-2"></i>Eceköy
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="yonetim-kurulu.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Yönetim Kurulu</a>
       <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">İletişim</a>
     </div>
     <button class="hidden md:block bg-primary text-white px-4 md:px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap text-sm lg:text-base">
@@ -175,11 +194,29 @@ hr.section-divider {
   <div class="hidden md:hidden bg-white absolute top-full left-0 right-0 border-t border-gray-200" id="mobile-menu">
     <div class="flex flex-col space-y-4 p-4">
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sayfa</a>
-      <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Hakkımızda</a>
+      <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Hakkımızda</a>
       <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Galeri</a>
-      <a href="anasinifi.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sınıfı</a>
-      <a href="lokanta.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Lokanta</a>
-      <a href="ecekoy.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Eceköy</a>
+      
+      <!-- Mobile Kuruluşlarımız Dropdown -->
+      <div class="mobile-dropdown">
+        <button class="text-secondary hover:text-primary transition-colors font-medium py-2 flex items-center justify-between w-full" id="mobile-dropdown-btn">
+          <span>Kuruluşlarımız</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200" id="mobile-dropdown-arrow"></i>
+        </button>
+        <div class="hidden ml-4 mt-2 space-y-2" id="mobile-dropdown-content">
+          <a href="anasinifi.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+          </a>
+          <a href="lokanta.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-restaurant-line mr-2"></i>Lokanta
+          </a>
+          <a href="ecekoy.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-home-4-line mr-2"></i>Eceköy
+          </a>
+        </div>
+      </div>
+      
+      <a href="yonetim-kurulu.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Yönetim Kurulu</a>
       <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">İletişim</a>
       <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap mt-2">
         Üye Ol
@@ -188,27 +225,9 @@ hr.section-divider {
   </div>
 </nav>
 
-<!-- Hero section -->
-<section class="gallery-hero min-h-[60vh] flex items-center relative pt-16 md:pt-20 animate-on-scroll">
-  <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/60 to-transparent"></div>
-  <div class="relative z-10 w-full px-4 sm:px-6 md:px-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="w-full max-w-3xl text-center md:text-left">
-        <h1 class="text-white font-['Playfair_Display'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 md:mb-8 fade-in-up delay-100">
-          Galeri
-        </h1>
-        <p class="text-white/90 text-base sm:text-lg md:text-xl mb-8 fade-in-up delay-150 max-w-2xl mx-auto md:mx-0">
-          Kooperatifimizin anlamlı anlarını, başarı hikayelerini ve topluluk ruhunu yansıtan fotoğraflarımızı keşfedin.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="section-divider">
 
 <!-- Filtreler -->
-<section class="py-8 md:py-12 px-4 sm:px-6 md:px-8 bg-purple-cream">
+<section class="pt-24 md:pt-28 pb-8 md:pb-12 px-4 sm:px-6 md:px-8 bg-purple-cream">
   <div class="max-w-7xl mx-auto">
     <div class="flex flex-wrap justify-center gap-4 animate-on-scroll">
       <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors text-sm sm:text-base">
@@ -238,7 +257,7 @@ hr.section-divider {
       <!-- Galeri Öğesi 1 -->
       <div class="gallery-item animate-on-scroll">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <img src="https://readdy.ai/api/search-image?query=women%20working%20together%20in%20community%20kitchen%20preparing%20food%20collaborative%20atmosphere%20natural%20lighting&width=400&height=300&seq=gallery1&orientation=landscape" 
+          <img src="img/anasayfa/hakkimizda.jpg" 
             alt="Kadınlar mutfakta çalışıyor" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -253,7 +272,7 @@ hr.section-divider {
       <!-- Galeri Öğesi 2 -->
       <div class="gallery-item animate-on-scroll">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <img src="https://readdy.ai/api/search-image?query=women%20learning%20handicrafts%20together%20in%20workshop%20educational%20setting%20natural%20lighting&width=400&height=300&seq=gallery2&orientation=landscape" 
+          <img src="img/anasayfa/hero-image.jpg" 
             alt="El sanatları eğitimi" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -268,7 +287,7 @@ hr.section-divider {
       <!-- Galeri Öğesi 3 -->
       <div class="gallery-item animate-on-scroll">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <img src="https://readdy.ai/api/search-image?query=community%20event%20with%20women%20celebrating%20together%20festive%20atmosphere%20natural%20lighting&width=400&height=300&seq=gallery3&orientation=landscape" 
+          <img src="img/anasayfa/toplumsal.jpg" 
             alt="Topluluk etkinliği" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -283,7 +302,7 @@ hr.section-divider {
       <!-- Galeri Öğesi 4 -->
       <div class="gallery-item animate-on-scroll">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <img src="https://readdy.ai/api/search-image?query=women%20selling%20handmade%20products%20at%20market%20cooperative%20business%20natural%20lighting&width=400&height=300&seq=gallery4&orientation=landscape" 
+          <img src="img/anasınıfı/egitim-gelisim.jpg" 
             alt="Ürün satışı" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -298,7 +317,7 @@ hr.section-divider {
       <!-- Galeri Öğesi 5 -->
       <div class="gallery-item animate-on-scroll">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <img src="https://readdy.ai/api/search-image?query=women%20participating%20in%20training%20workshop%20professional%20development%20natural%20lighting&width=400&height=300&seq=gallery5&orientation=landscape" 
+          <img src="img/ecekoy/ecekoy1.jpg" 
             alt="Eğitim atölyesi" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -313,7 +332,7 @@ hr.section-divider {
       <!-- Galeri Öğesi 6 -->
       <div class="gallery-item animate-on-scroll">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <img src="https://readdy.ai/api/search-image?query=women%20gardening%20together%20organic%20farming%20community%20garden%20natural%20lighting&width=400&height=300&seq=gallery6&orientation=landscape" 
+          <img src="img/ecekoy/ecekoy3.jpg" 
             alt="Bahçe çalışması" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -328,7 +347,7 @@ hr.section-divider {
       <!-- Galeri Öğesi 7 -->
       <div class="gallery-item animate-on-scroll">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <img src="https://readdy.ai/api/search-image?query=women%20meeting%20discussing%20cooperative%20business%20planning%20natural%20lighting&width=400&height=300&seq=gallery7&orientation=landscape" 
+          <img src="img/ecekoy/ecekoy4.jpg" 
             alt="Toplantı" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -343,13 +362,13 @@ hr.section-divider {
       <!-- Galeri Öğesi 8 -->
       <div class="gallery-item animate-on-scroll">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <img src="https://readdy.ai/api/search-image?query=women%20creating%20handmade%20textiles%20traditional%20weaving%20workshop%20natural%20lighting&width=400&height=300&seq=gallery8&orientation=landscape" 
-            alt="Dokuma atölyesi" 
+          <img src="img/ecekoy/ecekoy5.jpg" 
+            alt="Toplantı" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
             <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">Dokuma Atölyesi</h3>
-              <p class="text-xs opacity-90">Geleneksel dokuma teknikleri</p>
+              <h3 class="font-semibold text-sm">Kooperatif Toplantısı</h3>
+              <p class="text-xs opacity-90">Gelecek planları yapılıyor</p>
             </div>
           </div>
         </div>
@@ -358,7 +377,7 @@ hr.section-divider {
       <!-- Galeri Öğesi 9 -->
       <div class="gallery-item animate-on-scroll">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <img src="https://readdy.ai/api/search-image?query=women%20cooking%20traditional%20food%20together%20kitchen%20workshop%20natural%20lighting&width=400&height=300&seq=gallery9&orientation=landscape" 
+          <img src="img/ecekoy/ecekoy6.jpg " 
             alt="Geleneksel yemek yapımı" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -373,7 +392,7 @@ hr.section-divider {
       <!-- Galeri Öğesi 10 -->
       <div class="gallery-item animate-on-scroll">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <img src="https://readdy.ai/api/search-image?query=women%20teaching%20children%20educational%20activities%20community%20center%20natural%20lighting&width=400&height=300&seq=gallery10&orientation=landscape" 
+          <img src="img/ecekoy/ecekoy7.jpg" 
             alt="Çocuk eğitimi" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -388,7 +407,7 @@ hr.section-divider {
       <!-- Galeri Öğesi 11 -->
       <div class="gallery-item animate-on-scroll">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <img src="https://readdy.ai/api/search-image?query=women%20celebrating%20success%20achievement%20ceremony%20community%20event%20natural%20lighting&width=400&height=300&seq=gallery11&orientation=landscape" 
+          <img src="img/ecekoy/galeri1.jpg" 
             alt="Başarı kutlaması" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -403,7 +422,7 @@ hr.section-divider {
       <!-- Galeri Öğesi 12 -->
       <div class="gallery-item animate-on-scroll">
         <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <img src="https://readdy.ai/api/search-image?query=women%20working%20in%20artisan%20studio%20creating%20handmade%20jewelry%20natural%20lighting&width=400&height=300&seq=gallery12&orientation=landscape" 
+          <img src="img/ecekoy/galeri4.jpg" 
             alt="Takı yapımı" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
@@ -419,100 +438,10 @@ hr.section-divider {
   </div>
 </section>
 
-<!-- Daha Fazla Yükle -->
-<section class="py-8 md:py-12 px-4 sm:px-6 md:px-8 bg-purple-cream">
-  <div class="max-w-7xl mx-auto text-center">
-    <button class="bg-primary text-white px-8 py-4 !rounded-button font-semibold hover:bg-purple-soft/90 transition-colors text-lg">
-      Daha Fazla Fotoğraf Yükle
-      <i class="ri-arrow-down-line ml-2"></i>
-    </button>
-  </div>
-</section>
 
-<hr class="section-divider">
 
-<!-- Video Galeri -->
-<section class="py-12 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-12 md:mb-16 animate-on-scroll">
-      Video Galeri
-    </h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Video 1 -->
-      <div class="animate-on-scroll">
-        <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <div class="w-full h-64 bg-gray-200 flex items-center justify-center">
-            <div class="text-center">
-              <i class="ri-play-circle-line text-6xl text-primary mb-4"></i>
-              <p class="text-gray-600">Kooperatifimizin Hikayesi</p>
-            </div>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg mb-2">Kooperatifimizin Hikayesi</h3>
-            <p class="text-gray-600 text-sm">Kadın Kooperatifi'nin kuruluşundan bugüne kadar olan yolculuğunu anlatan belgesel.</p>
-          </div>
-        </div>
-      </div>
 
-      <!-- Video 2 -->
-      <div class="animate-on-scroll">
-        <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <div class="w-full h-64 bg-gray-200 flex items-center justify-center">
-            <div class="text-center">
-              <i class="ri-play-circle-line text-6xl text-primary mb-4"></i>
-              <p class="text-gray-600">El Sanatları Atölyesi</p>
-            </div>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg mb-2">El Sanatları Atölyesi</h3>
-            <p class="text-gray-600 text-sm">Kadınlarımızın el sanatları üretim süreçlerini gösteren kısa film.</p>
-          </div>
-        </div>
-      </div>
 
-      <!-- Video 3 -->
-      <div class="animate-on-scroll">
-        <div class="relative overflow-hidden rounded-lg shadow-lg">
-          <div class="w-full h-64 bg-gray-200 flex items-center justify-center">
-            <div class="text-center">
-              <i class="ri-play-circle-line text-6xl text-primary mb-4"></i>
-              <p class="text-gray-600">Topluluk Etkinlikleri</p>
-            </div>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg mb-2">Topluluk Etkinlikleri</h3>
-            <p class="text-gray-600 text-sm">Kooperatifimizin düzenlediği topluluk etkinliklerinden görüntüler.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- İletişim CTA -->
-<section class="py-12 md:py-20 px-4 sm:px-6 md:px-8 bg-primary">
-  <div class="max-w-7xl mx-auto text-center">
-    <h2 class="text-3xl sm:text-4xl md:text-5xl font-['Playfair_Display'] font-bold text-white mb-6 animate-on-scroll">
-      Anılarımızı Paylaşın
-    </h2>
-    <p class="text-white/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto animate-on-scroll">
-      Kooperatifimizle ilgili fotoğraf ve videolarınızı bizimle paylaşın. 
-      Topluluk galerimize katkıda bulunun.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll">
-      <a href="iletisim.html" class="bg-white text-primary px-8 py-4 !rounded-button font-semibold hover:bg-gray-50 transition-colors text-lg">
-        Fotoğraf Gönder
-        <i class="ri-upload-line ml-2"></i>
-      </a>
-      <a href="iletisim.html" class="border-2 border-white text-white px-8 py-4 !rounded-button font-semibold hover:bg-white hover:text-primary transition-colors text-lg">
-        İletişime Geç
-      </a>
-    </div>
-  </div>
-</section>
 
 <!-- Footer -->
 <footer class="bg-secondary text-white py-8 md:py-12 lg:py-16 px-4 md:px-8">

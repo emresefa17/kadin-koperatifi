@@ -164,11 +164,30 @@ hr.section-divider {
 
     <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sayfa</a>
-      <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
+      <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
       <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Galeri</a>
-      <a href="anasinifi.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sınıfı</a>
-      <a href="lokanta.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Lokanta</a>
-      <a href="ecekoy.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Eceköy</a>
+      
+      <!-- Kuruluşlarımız Dropdown -->
+      <div class="relative group">
+        <button class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base flex items-center space-x-1">
+          <span>Kuruluşlarımız</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200 group-hover:rotate-180"></i>
+        </button>
+        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <div class="py-2">
+            <a href="anasinifi.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+            </a>
+            <a href="lokanta.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-restaurant-line mr-2"></i>Lokanta
+            </a>
+            <a href="ecekoy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
+              <i class="ri-home-4-line mr-2"></i>Eceköy
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="yonetim-kurulu.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Yönetim Kurulu</a>
       <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">İletişim</a>
     </div>
     <button class="hidden md:block bg-primary text-white px-4 md:px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap text-sm lg:text-base">
@@ -180,11 +199,29 @@ hr.section-divider {
   <div class="hidden md:hidden bg-white absolute top-full left-0 right-0 border-t border-gray-200" id="mobile-menu">
     <div class="flex flex-col space-y-4 p-4">
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sayfa</a>
-      <a href="hakkimizda.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Hakkımızda</a>
+      <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Hakkımızda</a>
       <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Galeri</a>
-      <a href="anasinifi.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sınıfı</a>
-      <a href="lokanta.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Lokanta</a>
-      <a href="ecekoy.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Eceköy</a>
+      
+      <!-- Mobile Kuruluşlarımız Dropdown -->
+      <div class="mobile-dropdown">
+        <button class="text-secondary hover:text-primary transition-colors font-medium py-2 flex items-center justify-between w-full" id="mobile-dropdown-btn">
+          <span>Kuruluşlarımız</span>
+          <i class="ri-arrow-down-s-line transition-transform duration-200" id="mobile-dropdown-arrow"></i>
+        </button>
+        <div class="hidden ml-4 mt-2 space-y-2" id="mobile-dropdown-content">
+          <a href="anasinifi.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+          </a>
+          <a href="lokanta.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-restaurant-line mr-2"></i>Lokanta
+          </a>
+          <a href="ecekoy.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
+            <i class="ri-home-4-line mr-2"></i>Eceköy
+          </a>
+        </div>
+      </div>
+      
+      <a href="yonetim-kurulu.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Yönetim Kurulu</a>
       <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">İletişim</a>
       <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap mt-2">
         Üye Ol
