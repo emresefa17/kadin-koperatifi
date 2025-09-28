@@ -5,22 +5,25 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Biga Kadın Kooperatifi - Hakkımızda</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Pacifico&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
 <script>
   tailwind.config = {
     darkMode: "class",
     theme: {
       extend: {
         colors: {
-          "primary": "#553f68",  /* Yeşil yerine mor */
+          "primary": "#553f68",
           "background-light": "#f6f8f6",
           "background-dark": "#152012",
         },
         fontFamily: {
-          "display": ["Be Vietnam Pro"]
+          'display': ['Playfair Display', 'serif'],
+          'body': ['Inter', 'sans-serif'],
+          'decorative': ['Pacifico', 'cursive']
         },
         borderRadius: {
           "DEFAULT": "0.25rem",
@@ -32,9 +35,10 @@
     },
   }
 </script>
+
 <style>
   body {
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Inter', sans-serif; /* Paragraflar ve genel metinler */
   }
   .timeline-item:before {
     content: '';
@@ -50,14 +54,13 @@
   }
 </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-black dark:text-white font-display">
+<body class="bg-background-light dark:bg-background-dark text-black dark:text-white font-body">
 <div class="min-h-screen flex flex-col">
 
 <!-- Navbar -->
 <nav class="fixed top-0 left-0 right-0 z-50 bg-white px-8 md:px-12 py-3 shadow-md transition-transform duration-300">
   <div class="relative flex items-center justify-between max-w-7xl mx-auto">
-
-     <!-- Logo (Sola sabit) -->
+    <!-- Logo -->
     <div class="flex items-center -ml-2 md:-ml-16">
       <a href="index.html">
         <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-24 w-auto object-contain">
@@ -90,8 +93,6 @@
           </div>
         </div>
       </div>
-
-   
     </div>
 
     <!-- Mobile Menü Butonu -->
@@ -134,8 +135,8 @@
   <div class="max-w-4xl mx-auto">
     <!-- Başlık -->
     <div class="text-center mb-16">
-      <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-primary">Hakkımızda</h1>
-      <p class="mt-4 text-lg text-black/60 dark:text-white/60 max-w-2xl mx-auto leading-relaxed">
+      <h1 class="text-4xl md:text-5xl font-display font-black tracking-tighter text-primary">Hakkımızda</h1>
+      <p class="mt-4 text-lg font-body text-black/60 dark:text-white/60 max-w-2xl mx-auto leading-relaxed">
         Biga Kadın Kooperatifi (BİKAD), 2004 yılından bu yana kadınların ekonomik ve sosyal hayata katılımını destekleyerek, el emeği ürünlerini değerlendiriyor ve toplumsal farkındalığı artırıyoruz.
       </p>
     </div>
@@ -143,7 +144,7 @@
     <!-- Timeline -->
     <div class="grid md:grid-cols-5 gap-12">
       <div class="md:col-span-3">
-        <h2 class="text-3xl font-bold mb-8">Tarihçemiz</h2>
+        <h2 class="text-3xl font-display font-bold mb-8">Tarihçemiz</h2>
         <div class="relative">
           <!-- Timeline Items -->
           <!-- 2004 -->
@@ -153,8 +154,8 @@
                 <div class="w-5 h-5 bg-primary rounded-full"></div>
               </div>
               <div>
-                <h3 class="font-bold text-lg">2004: BİKAD’ın Doğuşu</h3>
-                <p class="text-black/60 dark:text-white/60 leading-relaxed max-w-2xl mt-1">
+                <h3 class="font-display font-bold text-lg">2004: BİKAD’ın Doğuşu</h3>
+                <p class="font-body text-black/60 dark:text-white/60 leading-relaxed max-w-2xl mt-1">
                   Biga Kadın Kooperatifi (BİKAD), 2004 yılında Çanakkale Onsekiz Mart Üniversitesi’nde düzenlenen Kadınlar Günü etkinliğinde filizlenen bir fikirle doğdu. Kadınların ekonomik yaşama katılımını artırma vizyonu, Yerel Gündem 21 Kadın Meclisi çalışmalarıyla şekillendi ve Kadın Emeğini Değerlendirme Vakfı (KEDV) desteğiyle somut adımlara dönüştü.
                 </p>
               </div>
@@ -168,8 +169,8 @@
                 <div class="w-5 h-5 bg-primary rounded-full"></div>
               </div>
               <div>
-                <h3 class="font-bold text-lg">2005: Resmî Kuruluş ve İlk Üretim</h3>
-                <p class="text-black/60 dark:text-white/60 leading-relaxed max-w-2xl mt-1">
+                <h3 class="font-display font-bold text-lg">2005: Resmî Kuruluş ve İlk Üretim</h3>
+                <p class="font-body text-black/60 dark:text-white/60 leading-relaxed max-w-2xl mt-1">
                   9 Mart 2005’te Biga’da kurulan BİKAD, kısa sürede kadın emeğini üretime dönüştüren güçlü bir yapıya kavuştu. İlk günlerde gönüllü kadınlar, ev mutfaklarında hazırladıkları tarhana, erişte, mantı, kuskus ve bayram tatlılarını Biga Panayırı’nda satışa sundu.
                 </p>
               </div>
@@ -183,8 +184,8 @@
                 <div class="w-5 h-5 bg-primary rounded-full"></div>
               </div>
               <div>
-                <h3 class="font-bold text-lg">2006: Özel Biga Anaokulu</h3>
-                <p class="text-black/60 dark:text-white/60 leading-relaxed max-w-2xl mt-1">
+                <h3 class="font-display font-bold text-lg">2006: Özel Biga Anaokulu</h3>
+                <p class="font-body text-black/60 dark:text-white/60 leading-relaxed max-w-2xl mt-1">
                   BİKAD, üretimin yanı sıra toplumsal faydayı büyütmek amacıyla Millî Eğitim’e bağlı Özel Biga Anaokulu’nu açtı. 3–6 yaş grubu çocuklara okul öncesi eğitim hizmeti sunan bu girişim, kooperatifin sosyal dayanışma misyonunu güçlendirdi.
                 </p>
               </div>
@@ -198,8 +199,8 @@
                 <div class="w-5 h-5 bg-primary rounded-full"></div>
               </div>
               <div>
-                <h3 class="font-bold text-lg">2018: Agro-Turizm ve Eceköy Peynirleri</h3>
-                <p class="text-black/60 dark:text-white/60 leading-relaxed max-w-2xl mt-1">
+                <h3 class="font-display font-bold text-lg">2018: Agro-Turizm ve Eceköy Peynirleri</h3>
+                <p class="font-body text-black/60 dark:text-white/60 leading-relaxed max-w-2xl mt-1">
                   BİKAD, TANAP Sosyal ve Çevresel Yatırım Programı kapsamında yürütülen projelerle kırsaldaki kadın üreticiler için yeni bir dönüm noktası yaşadı.
                 </p>
               </div>
@@ -213,8 +214,8 @@
                 <div class="w-5 h-5 bg-primary rounded-full"></div>
               </div>
               <div>
-                <h3 class="font-bold text-lg">Günümüz: BİKAD Mutfak ve Sosyal Etki</h3>
-                <p class="text-black/60 dark:text-white/60 leading-relaxed max-w-2xl mt-1">
+                <h3 class="font-display font-bold text-lg">Günümüz: BİKAD Mutfak ve Sosyal Etki</h3>
+                <p class="font-body text-black/60 dark:text-white/60 leading-relaxed max-w-2xl mt-1">
                   Bugün BİKAD; yerel sütlerden üretilen peynirleri ve geleneksel ürünleri modern hijyen standartlarıyla buluştururken, aynı zamanda BİKAD Mutfak çatısı altında üretimini sürdürmektedir.
                 </p>
               </div>
@@ -228,28 +229,28 @@
     <!-- Misyon & Vizyon -->
     <div class="mt-16 max-w-4xl mx-auto space-y-12">
       <div class="bg-white dark:bg-background-dark/80 p-6 rounded-xl shadow-md">
-        <h2 class="text-3xl font-bold mb-4">Misyonumuz</h2>
-        <p class="text-black/60 dark:text-white/60 leading-relaxed max-w-2xl">
-         Biga Kadın Kooperatifi olarak misyonumuz;
-Kadınların emeğini görünür kılmak ve onları ekonomik hayata dahil etmek,
-Yerel üretimi destekleyerek sağlıklı, doğal ve katkısız ürünleri sofralara ulaştırmak,
-Kooperatifçilik ruhunu yaşatarak dayanışmayı, eşitliği ve paylaşımı güçlendirmek,
-Kırsaldaki kadın üreticilerin bilgilerini, geleneksel yöntemlerini ve üretim becerilerini koruyarak gelecek nesillere aktarmak,
-Sürdürülebilir, adil ve toplumsal faydayı önceleyen bir üretim modeli ile yoksullukla mücadeleye katkı sağlamaktır.
-Bizim için üretim sadece ürün ortaya koymak değildir; aynı zamanda bilgi, emek ve değer paylaşımıdır.
+        <h2 class="text-3xl font-display font-bold mb-4">Misyonumuz</h2>
+        <p class="font-body text-black/60 dark:text-white/60 leading-relaxed max-w-2xl">
+          Biga Kadın Kooperatifi olarak misyonumuz;
+          Kadınların emeğini görünür kılmak ve onları ekonomik hayata dahil etmek,
+          Yerel üretimi destekleyerek sağlıklı, doğal ve katkısız ürünleri sofralara ulaştırmak,
+          Kooperatifçilik ruhunu yaşatarak dayanışmayı, eşitliği ve paylaşımı güçlendirmek,
+          Kırsaldaki kadın üreticilerin bilgilerini, geleneksel yöntemlerini ve üretim becerilerini koruyarak gelecek nesillere aktarmak,
+          Sürdürülebilir, adil ve toplumsal faydayı önceleyen bir üretim modeli ile yoksullukla mücadeleye katkı sağlamaktır.
+          Bizim için üretim sadece ürün ortaya koymak değildir; aynı zamanda bilgi, emek ve değer paylaşımıdır.
         </p>
       </div>
 
       <div class="bg-white dark:bg-background-dark/80 p-6 rounded-xl shadow-md">
-        <h2 class="text-3xl font-bold mb-4">Vizyonumuz</h2>
-        <p class="text-black/60 dark:text-white/60 leading-relaxed max-w-2xl">
-        Biga Kadın Kooperatifi olarak vizyonumuz;
-Kadın emeğinin değer gördüğü,
-Yerel üretimin korunup güçlendiği,
-Doğal ve sağlıklı ürünlerin sofralara ulaştığı,
-Dayanışma ve paylaşım kültürünün yaygınlaştığı
-bir gelecek inşa etmektir.
-Hedefimiz, sadece Biga’da değil; Türkiye’de ve dünyada örnek gösterilen, kadın emeğiyle büyüyen sürdürülebilir bir kooperatif modeli olmaktır.
+        <h2 class="text-3xl font-display font-bold mb-4">Vizyonumuz</h2>
+        <p class="font-body text-black/60 dark:text-white/60 leading-relaxed max-w-2xl">
+          Biga Kadın Kooperatifi olarak vizyonumuz;
+          Kadın emeğinin değer gördüğü,
+          Yerel üretimin korunup güçlendiği,
+          Doğal ve sağlıklı ürünlerin sofralara ulaştığı,
+          Dayanışma ve paylaşım kültürünün yaygınlaştığı
+          bir gelecek inşa etmektir.
+          Hedefimiz, sadece Biga’da değil; Türkiye’de ve dünyada örnek gösterilen, kadın emeğiyle büyüyen sürdürülebilir bir kooperatif modeli olmaktır.
         </p>
       </div>
     </div>
@@ -259,24 +260,21 @@ Hedefimiz, sadece Biga’da değil; Türkiye’de ve dünyada örnek gösterilen
 
 <!-- Footer -->
 <footer class="bg-[#553f68] text-white py-8 md:py-12 lg:py-16 px-4 md:px-8">
-
   <div class="max-w-7xl mx-auto">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
-      
       <!-- LOGO VE AÇIKLAMA -->
       <div class="space-y-4 md:space-y-6 animate-on-scroll">
         <div class="mb-3 md:mb-4 fade-in-up">
           <img src="BikafBeyazLogo.jpg" alt="Kadın Kooperatifi Logo" class="h-10 md:h-12 lg:h-14 object-contain">
         </div>
-        <p class="text-white/80 leading-relaxed text-sm sm:text-base">
+        <p class="font-body text-white/80 leading-relaxed text-sm sm:text-base">
           Eğitim, el sanatları ve topluluk desteği ile değişimi güçlendiriyoruz. Birlikte, daha parlak bir gelecek için kalıcı etki yaratıyoruz.
         </p>
-      
       </div>
 
       <!-- HIZLI BAĞLANTILAR -->
       <div class="space-y-6 animate-on-scroll">
-        <h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 fade-in-left">Hızlı Bağlantılar</h3>
+        <h3 class="text-xl font-display font-semibold mb-4 fade-in-left">Hızlı Bağlantılar</h3>
         <ul class="space-y-3">
           <li><a href="index.html" class="text-white/80 hover:text-white transition-colors">Ana Sayfa</a></li>
           <li><a href="tarihimiz.html" class="text-white/80 hover:text-white transition-colors">Tarihimiz</a></li>
@@ -287,54 +285,54 @@ Hedefimiz, sadece Biga’da değil; Türkiye’de ve dünyada örnek gösterilen
         </ul>
       </div>
 
-      <!-- İLETİŞİM BİLGİLERİ -->
-      <div class="space-y-6 animate-on-scroll">
-        <h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 bounce-in">İletişim Bilgileri</h3>
-        <div class="space-y-4">
-          <div class="flex items-center space-x-3">
-            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-              <i class="ri-phone-line text-primary"></i>
-            </div>
-            <div>
-              <p class="text-white/80 text-sm">+90 507 533 5340</p>
-            </div>
-          </div>
-          <div class="flex items-center space-x-3">
-            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-              <i class="ri-mail-line text-primary"></i>
-            </div>
-            <div>
-              <p class="text-white/80 text-sm">bigakadinkooperatifi@gmail.com</p>
-            </div>
-          </div>
-        </div>
+    <!-- İLETİŞİM BİLGİLERİ -->
+<div class="space-y-6 animate-on-scroll">
+  <h3 class="text-xl font-display font-semibold mb-4 bounce-in">İletişim Bilgileri</h3>
+  <div class="space-y-4">
+   
+    <div class="flex items-center space-x-3">
+      <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+        <i class="ri-mail-line text-primary text-lg"></i>
       </div>
+      <span class="font-body text-white/80 text-sm sm:text-base">bigakadinkooperatifi@gmail.com</span>
     </div>
-
- <!-- ALT KISIM -->
-<div class="border-t border-white/20 pt-8">
-  <div class="flex justify-center items-center">
-    <div class="text-white/80 text-sm text-center">
-      © 2025 Kadın Kooperatifi. Tüm hakları saklıdır.
+    <div class="flex items-center space-x-3">
+      <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+        <i class="ri-phone-line text-primary text-lg"></i>
+      </div>
+      <span class="font-body text-white/80 text-sm sm:text-base">+90 507 533 5340</span>
     </div>
   </div>
 </div>
 
+
+    <!-- ALT KISIM -->
+    <div class="border-t border-white/20 pt-8">
+      <div class="flex flex-col md:flex-row justify-center items-center">
+        <div class="text-white/80 text-sm text-center md:text-center">
+          © 2025 Kadın Kooperatifi. Tüm hakları saklıdır.
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
+<!-- Scripts -->
 <script>
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+  // Mobil menü toggle
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  mobileMenuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
   });
 
-  const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
-  const mobileDropdownContent = document.getElementById('mobile-dropdown-content');
-  const mobileDropdownArrow = document.getElementById('mobile-dropdown-arrow');
-  mobileDropdownBtn.addEventListener('click', () => {
-    mobileDropdownContent.classList.toggle('hidden');
-    mobileDropdownArrow.classList.toggle('rotate-180');
+  // Mobil dropdown toggle
+  const mobileDropdownBtn = document.getElementById("mobile-dropdown-btn");
+  const mobileDropdownContent = document.getElementById("mobile-dropdown-content");
+  const mobileDropdownArrow = document.getElementById("mobile-dropdown-arrow");
+  mobileDropdownBtn.addEventListener("click", () => {
+    mobileDropdownContent.classList.toggle("hidden");
+    mobileDropdownArrow.classList.toggle("rotate-180");
   });
 </script>
 </body>
