@@ -148,33 +148,35 @@ hr.section-divider {
 </head>
 <body class="bg-white">
 <!-- Navbar -->
-<!-- Navbar -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-6 py-1 shadow-md transition-transform duration-300">
-  <div class="flex items-center justify-between">
-    <div class="flex items-center">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white px-8 md:px-12 py-3 shadow-md transition-transform duration-300">
+  <div class="relative flex items-center justify-between max-w-7xl mx-auto">
+
+    <!-- Logo (Sola sabit) -->
+    <div class="flex items-center -ml-2 md:-ml-16">
       <a href="index.html">
         <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-24 w-auto object-contain">
       </a>
-    </div> <button class="md:hidden text-secondary p-3" id="mobile-menu-btn"> <i class="ri-menu-line text-3xl"></i> </button>
+    </div>
 
-    <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
-      <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sayfa</a>
-      <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
-      <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Galeri</a>
+    <!-- Menü (Sağa hizalı) -->
+    <div class="hidden md:flex items-center ml-auto mr-8 md:mr-52 flex-nowrap space-x-8 whitespace-nowrap">
+      <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-base">Ana Sayfa</a>
+      <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium text-base">Hakkımızda</a>
+      <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-base">Galeri</a>
       
       <!-- Kuruluşlarımız Dropdown -->
       <div class="relative group">
-        <button class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base flex items-center space-x-1">
+        <button class="text-secondary hover:text-primary transition-colors font-medium text-base flex items-center space-x-1">
           <span>Kuruluşlarımız</span>
           <i class="ri-arrow-down-s-line transition-transform duration-200 group-hover:rotate-180"></i>
         </button>
         <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
           <div class="py-2">
             <a href="anasinifi.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
-              <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+              <i class="ri-book-open-line mr-2"></i>Özel Ana Okulu
             </a>
             <a href="lokanta.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
-              <i class="ri-restaurant-line mr-2"></i>Lokanta
+              <i class="ri-restaurant-line mr-2"></i>BİKAD Lokanta
             </a>
             <a href="ecekoy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
               <i class="ri-home-4-line mr-2"></i>Eceköy
@@ -182,16 +184,17 @@ hr.section-divider {
           </div>
         </div>
       </div>
-      <a href="yonetim-kurulu.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Yönetim Kurulu</a>
-      <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">İletişim</a>
+
     </div>
-    <button class="hidden md:block bg-primary text-white px-4 md:px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap text-sm lg:text-base">
-      Üye Ol
+
+    <!-- Mobile Menü Butonu (Sağda sabit) -->
+    <button class="md:hidden text-secondary p-3" id="mobile-menu-btn">
+      <i class="ri-menu-line text-3xl"></i>
     </button>
   </div>
   
   <!-- Mobil menü -->
-  <div class="hidden md:hidden bg-white absolute top-full left-0 right-0 border-t border-gray-200" id="mobile-menu">
+  <div class="hidden md:hidden bg-white fixed top-20 left-0 right-0 border-t border-gray-200 shadow-lg z-40" id="mobile-menu">
     <div class="flex flex-col space-y-4 p-4">
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sayfa</a>
       <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Hakkımızda</a>
@@ -205,10 +208,10 @@ hr.section-divider {
         </button>
         <div class="hidden ml-4 mt-2 space-y-2" id="mobile-dropdown-content">
           <a href="anasinifi.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
-            <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+            <i class="ri-book-open-line mr-2"></i>Özel Ana Okulu
           </a>
           <a href="lokanta.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
-            <i class="ri-restaurant-line mr-2"></i>Lokanta
+            <i class="ri-restaurant-line mr-2"></i>BİKAD Mutfak
           </a>
           <a href="ecekoy.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
             <i class="ri-home-4-line mr-2"></i>Eceköy
@@ -216,41 +219,17 @@ hr.section-divider {
         </div>
       </div>
       
-      <a href="yonetim-kurulu.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Yönetim Kurulu</a>
-      <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">İletişim</a>
-      <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap mt-2">
-        Üye Ol
-      </button>
+
+     
     </div>
   </div>
 </nav>
 
-
 <!-- Filtreler -->
-<section class="pt-24 md:pt-28 pb-8 md:pb-12 px-4 sm:px-6 md:px-8 bg-purple-cream">
-  <div class="max-w-7xl mx-auto">
-    <div class="flex flex-wrap justify-center gap-4 animate-on-scroll">
-      <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors text-sm sm:text-base">
-        Tümü
-      </button>
-      <button class="bg-white text-gray-600 px-6 py-2 !rounded-button font-medium hover:bg-gray-50 transition-colors text-sm sm:text-base">
-        Etkinlikler
-      </button>
-      <button class="bg-white text-gray-600 px-6 py-2 !rounded-button font-medium hover:bg-gray-50 transition-colors text-sm sm:text-base">
-        Üretim
-      </button>
-      <button class="bg-white text-gray-600 px-6 py-2 !rounded-button font-medium hover:bg-gray-50 transition-colors text-sm sm:text-base">
-        Eğitim
-      </button>
-      <button class="bg-white text-gray-600 px-6 py-2 !rounded-button font-medium hover:bg-gray-50 transition-colors text-sm sm:text-base">
-        Topluluk
-      </button>
-    </div>
-  </div>
-</section>
+
 
 <!-- Galeri Grid -->
-<section class="py-8 md:py-12 px-4 sm:px-6 md:px-8 bg-white">
+<section class="mt-24 md:mt-32 py-12 px-4 sm:px-6 md:px-8 bg-white">
   <div class="max-w-7xl mx-auto">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
       
@@ -261,10 +240,7 @@ hr.section-divider {
             alt="Kadınlar mutfakta çalışıyor" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">Mutfak Atölyesi</h3>
-              <p class="text-xs opacity-90">Kadınlar birlikte yemek hazırlıyor</p>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -276,10 +252,7 @@ hr.section-divider {
             alt="El sanatları eğitimi" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">El Sanatları Eğitimi</h3>
-              <p class="text-xs opacity-90">Geleneksel teknikler öğreniliyor</p>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -291,10 +264,7 @@ hr.section-divider {
             alt="Topluluk etkinliği" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">Topluluk Etkinliği</h3>
-              <p class="text-xs opacity-90">Başarılar kutlanıyor</p>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -306,10 +276,7 @@ hr.section-divider {
             alt="Ürün satışı" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">Ürün Satışı</h3>
-              <p class="text-xs opacity-90">El emeği ürünler pazarda</p>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -321,10 +288,7 @@ hr.section-divider {
             alt="Eğitim atölyesi" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">Eğitim Atölyesi</h3>
-              <p class="text-xs opacity-90">Profesyonel gelişim eğitimi</p>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -336,10 +300,7 @@ hr.section-divider {
             alt="Bahçe çalışması" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">Bahçe Çalışması</h3>
-              <p class="text-xs opacity-90">Organik tarım yapılıyor</p>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -351,10 +312,7 @@ hr.section-divider {
             alt="Toplantı" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">Kooperatif Toplantısı</h3>
-              <p class="text-xs opacity-90">Gelecek planları yapılıyor</p>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -366,10 +324,7 @@ hr.section-divider {
             alt="Toplantı" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">Kooperatif Toplantısı</h3>
-              <p class="text-xs opacity-90">Gelecek planları yapılıyor</p>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -381,10 +336,7 @@ hr.section-divider {
             alt="Geleneksel yemek yapımı" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">Geleneksel Yemek</h3>
-              <p class="text-xs opacity-90">Yerel tarifler hazırlanıyor</p>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -396,10 +348,7 @@ hr.section-divider {
             alt="Çocuk eğitimi" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">Çocuk Eğitimi</h3>
-              <p class="text-xs opacity-90">Gelecek nesillere öğretiyoruz</p>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -411,10 +360,7 @@ hr.section-divider {
             alt="Başarı kutlaması" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">Başarı Kutlaması</h3>
-              <p class="text-xs opacity-90">Başarılar paylaşılıyor</p>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -426,10 +372,292 @@ hr.section-divider {
             alt="Takı yapımı" 
             class="w-full h-64 object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="absolute bottom-4 left-4 text-white">
-              <h3 class="font-semibold text-sm">Takı Yapımı</h3>
-              <p class="text-xs opacity-90">El yapımı takılar üretiliyor</p>
-            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Mevcut galeri grid içine eklenecek yeni öğeler -->
+
+      <!-- Galeri Öğesi 13 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/anasinifi/anasinifi2.jpg" 
+            alt="Ana sınıfı etkinliği" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 14 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/anasinifi/anasinifi10.jpg" 
+            alt="Ana sınıfı oyun zamanı" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 15 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/anasinifi/anasinifi3.jpg" 
+            alt="Sanat etkinliği" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+          
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 16 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/lokanta/lokanta1.jpg" 
+            alt="Lokanta hazırlık" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 17 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/lokanta/lokanta2.jpg" 
+            alt="Yemek servisi" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 18 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/lokanta/lokanta3.jpg" 
+            alt="Mutfak etkinliği" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 19 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/lokanta/lokanta4.jpg" 
+            alt="Yemek hazırlığı" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 20 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/lokanta/lokanta5.jpg" 
+            alt="Servis anı" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 21 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/lokanta/lokanta6.jpg" 
+            alt="Yemek sunumu" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 22 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/lokanta/lokanta7.jpg" 
+            alt="Mutfak hazırlığı" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 23 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/lokanta/lokanta8.jpg" 
+            alt="Yemek pişirme" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 24 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/lokanta/lokanta9.jpg" 
+            alt="Servis hazırlığı" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 25 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/lokanta/lokanta10.jpg" 
+            alt="Yemek tadımı" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 26 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/ecekoy/ecekoy1.jpg" 
+            alt="Eceköy etkinliği" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 27 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/anasinifi/anasinifi11.jpg" 
+            alt="Bahçe etkinliği" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 28 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/ecekoy/ecekoy3.jpg" 
+            alt="Tarım atölyesi" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 29 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/ecekoy/ecekoy4.jpg" 
+            alt="Kooperatif etkinliği" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Galeri Öğesi 30 -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/ecekoy/ecekoy5.jpg" 
+            alt="Topluluk bahçesi" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Yeni Ana Sınıfı fotoğrafları -->
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/anasinifi/anasinifi4.jpg" 
+            alt="Ana sınıfı resim etkinliği" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/anasinifi/anasinifi5.jpg" 
+            alt="Ana sınıfı müzik dersi" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/anasinifi/anasinifi6.jpg" 
+            alt="Ana sınıfı okuma saati" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/anasinifi/anasinifi7.jpg" 
+            alt="Ana sınıfı oyun zamanı" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/anasinifi/anasinifi8.jpg" 
+            alt="Ana sınıfı el işi etkinliği" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item animate-on-scroll">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img src="img/anasinifi/anasinifi9.jpg" 
+            alt="Ana sınıfı grup aktivitesi" 
+            class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+            
           </div>
         </div>
       </div>
@@ -446,105 +674,118 @@ hr.section-divider {
 <!-- Footer -->
 <footer class="bg-secondary text-white py-8 md:py-12 lg:py-16 px-4 md:px-8">
   <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+      
+      <!-- LOGO VE AÇIKLAMA -->
       <div class="space-y-4 md:space-y-6 animate-on-scroll">
-<div class="text-white font-['Pacifico'] text-2xl md:text-3xl mb-3 md:mb-4 fade-in-up">
-Kadın Kooperatifi
-</div>
-<p class="text-white/80 leading-relaxed text-sm sm:text-base">
-Eğitim, el sanatları ve topluluk desteği ile değişimi güçlendiriyoruz. Birlikte, daha parlak bir gelecek için kalıcı etki yaratıyoruz.
-</p>
-<div class="flex space-x-3 md:space-x-4">
-<a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-<i class="ri-facebook-fill text-sm md:text-base"></i>
-</a>
-<a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-<i class="ri-twitter-fill text-sm md:text-base"></i>
-</a>
-<a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-<i class="ri-instagram-fill text-sm md:text-base"></i>
-</a>
-<a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-<i class="ri-linkedin-fill text-sm md:text-base"></i>
-</a>
-</div>
-</div>
-<div class="space-y-6 animate-on-scroll">
-<h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 fade-in-left">Hızlı Bağlantılar</h3>
-<ul class="space-y-3">
-<li><a href="index.html" class="text-white/80 hover:text-white transition-colors">Ana Sayfa</a></li>
-<li><a href="lokanta.html" class="text-white/80 hover:text-white transition-colors">Lokanta</a></li>
-</ul>
-</div>
-<div class="space-y-6 animate-on-scroll">
-<h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 fade-in-right">Programlarımız</h3>
-<ul class="space-y-3">
-<li><a href="#" class="text-white/80 hover:text-white transition-colors">Eğitim</a></li>
-<li><a href="#" class="text-white/80 hover:text-white transition-colors">El Sanatları</a></li>
-<li><a href="#" class="text-white/80 hover:text-white transition-colors">Topluluk Desteği</a></li>
-<li><a href="#" class="text-white/80 hover:text-white transition-colors">Kadın Güçlendirme</a></li>
-<li><a href="#" class="text-white/80 hover:text-white transition-colors">Beceri Geliştirme</a></li>
-</ul>
-</div>
-<div class="space-y-6 animate-on-scroll">
-<h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 bounce-in">İletişim Bilgileri</h3>
-<div class="space-y-4">
-<div class="flex items-center space-x-3">
-<div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-<i class="ri-map-pin-line text-primary"></i>
-</div>
-<div>
-<p class="text-white/80 text-sm">123 Kooperatif Caddesi</p>
-<p class="text-white/80 text-sm">Kadın Merkezi, TC 12345</p>
-</div>
-</div>
-<div class="flex items-center space-x-3">
-<div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-<i class="ri-phone-line text-primary"></i>
-</div>
-<div>
-<p class="text-white/80 text-sm">+90 (555) 123-4567</p>
-</div>
-</div>
-<div class="flex items-center space-x-3">
-<div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-<i class="ri-mail-line text-primary"></i>
-</div>
-<div>
-<p class="text-white/80 text-sm">info@kadinkooperatifi.org</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+        <div class="mb-3 md:mb-4 fade-in-up">
+          <img src="BikafBeyazLogo.jpg" alt="Kadın Kooperatifi Logo" class="h-10 md:h-12 lg:h-14 object-contain">
+        </div>
+        <p class="text-white/80 leading-relaxed text-sm sm:text-base">
+          Eğitim, el sanatları ve topluluk desteği ile değişimi güçlendiriyoruz. Birlikte, daha parlak bir gelecek için kalıcı etki yaratıyoruz.
+        </p>
+      
+      </div>
+
+      <!-- HIZLI BAĞLANTILAR -->
+      <div class="space-y-6 animate-on-scroll">
+        <h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 fade-in-left">Hızlı Bağlantılar</h3>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="text-white/80 hover:text-white transition-colors">Ana Sayfa</a></li>
+          <li><a href="tarihimiz.html" class="text-white/80 hover:text-white transition-colors">Tarihimiz</a></li>
+          <li><a href="galeri.html" class="text-white/80 hover:text-white transition-colors">Galeri</a></li>
+          <li><a href="anasinifi.html" class="text-white/80 hover:text-white transition-colors">Özel Ana Okulu</a></li>
+          <li><a href="lokanta.html" class="text-white/80 hover:text-white transition-colors">BİKAD Mutfak</a></li>
+          <li><a href="ecekoy.html" class="text-white/80 hover:text-white transition-colors">Eceköy</a></li>
+        </ul>
+      </div>
+
+      <!-- İLETİŞİM BİLGİLERİ -->
+      <div class="space-y-6 animate-on-scroll">
+        <h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 bounce-in">İletişim Bilgileri</h3>
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+              <i class="ri-phone-line text-primary"></i>
+            </div>
+            <div>
+              <p class="text-white/80 text-sm">+90 507 533 5340</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+              <i class="ri-mail-line text-primary"></i>
+            </div>
+            <div>
+              <p class="text-white/80 text-sm">bigakadinkooperatifi@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <!-- ALT KISIM -->
 <div class="border-t border-white/20 pt-8">
-<div class="flex flex-col md:flex-row justify-between items-center">
-<div class="text-white/80 text-sm mb-4 md:mb-0 text-center md:text-left">
-© 2024 Kadın Kooperatifi. Tüm hakları saklıdır.
+  <div class="flex justify-center items-center">
+    <div class="text-white/80 text-sm text-center">
+      © 2025 Kadın Kooperatifi. Tüm hakları saklıdır.
+    </div>
+  </div>
 </div>
-<div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-sm text-center">
-<a href="#" class="text-white/80 hover:text-white transition-colors">Gizlilik Politikası</a>
-<a href="#" class="text-white/80 hover:text-white transition-colors">Kullanım Şartları</a>
-<a href="#" class="text-white/80 hover:text-white transition-colors">Çerez Politikası</a>
-</div>
-</div>
-</div>
-</div>
+
 </footer>
+
 
 <!-- JavaScript -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Mobil menü
   const mobileMenuButton = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  
+
+  // Mobil dropdown
+  const dropdownBtn = document.getElementById('mobile-dropdown-btn');
+  const dropdownContent = document.getElementById('mobile-dropdown-content');
+  const dropdownArrow = document.getElementById('mobile-dropdown-arrow');
+
+  // Mobil menüyü aç/kapat
   if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', function() {
+    mobileMenuButton.addEventListener('click', function(event) {
       mobileMenu.classList.toggle('hidden');
+
+      // Icon değiştirme
+      const icon = mobileMenuButton.querySelector('i');
+      if (mobileMenu.classList.contains('hidden')) {
+        icon.className = 'ri-menu-line text-3xl';
+      } else {
+        icon.className = 'ri-close-line text-3xl';
+      }
     });
   }
 
-  // Scroll animations
+  // Mobil dropdown menü aç/kapat
+  if (dropdownBtn && dropdownContent) {
+    dropdownBtn.addEventListener('click', function(event) {
+      event.stopPropagation(); // Dışarı tıkla listener’ına takılmasın
+      dropdownContent.classList.toggle('hidden');
+      dropdownArrow.classList.toggle('rotate-180'); // arrow dönsün
+    });
+  }
+
+  // Dışarı tıklandığında menüyü ve dropdown'u kapat
+  document.addEventListener('click', function(event) {
+    if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+      mobileMenu.classList.add('hidden');
+      const icon = mobileMenuButton.querySelector('i');
+      icon.className = 'ri-menu-line text-3xl';
+    }
+    if (!dropdownBtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+      dropdownContent.classList.add('hidden');
+      dropdownArrow.classList.remove('rotate-180');
+    }
+  });
+
+  // Scroll animasyonları
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -571,50 +812,44 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(el);
   });
 
-  // Gallery filter functionality
+  // Gallery filtreleme
   const filterButtons = document.querySelectorAll('button');
   filterButtons.forEach(button => {
     button.addEventListener('click', function() {
-      // Remove active class from all buttons
       filterButtons.forEach(btn => {
         btn.classList.remove('bg-primary', 'text-white');
         btn.classList.add('bg-white', 'text-gray-600');
       });
-      
-      // Add active class to clicked button
       this.classList.remove('bg-white', 'text-gray-600');
       this.classList.add('bg-primary', 'text-white');
     });
   });
 });
-</script>
-<script>
+
+// Navbar scroll animasyonu
 let lastScrollTop = 0;
 const navbar = document.querySelector('nav');
 let isScrollingDown = false;
 
 window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > lastScrollTop && !isScrollingDown && scrollTop > 100) {
-        // Aşağı scroll
-        navbar.style.transform = 'translateY(-100%)';
-        isScrollingDown = true;
-    } else if (scrollTop < lastScrollTop && isScrollingDown) {
-        // Yukarı scroll
-        navbar.style.transform = 'translateY(0)';
-        isScrollingDown = false;
-    }
-    
-    lastScrollTop = scrollTop;
-});
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-// Sayfanın en üstünde navbar'ı her zaman göster
-window.addEventListener('scroll', () => {
-    if (window.scrollY < 100) {
-        navbar.style.transform = 'translateY(0)';
-    }
+  if (scrollTop > lastScrollTop && !isScrollingDown && scrollTop > 100) {
+      navbar.style.transform = 'translateY(-100%)';
+      isScrollingDown = true;
+  } else if (scrollTop < lastScrollTop && isScrollingDown) {
+      navbar.style.transform = 'translateY(0)';
+      isScrollingDown = false;
+  }
+
+  // Sayfanın en üstünde navbar'ı her zaman göster
+  if (window.scrollY < 100) {
+      navbar.style.transform = 'translateY(0)';
+  }
+
+  lastScrollTop = scrollTop;
 });
 </script>
+
 </body>
 </html>

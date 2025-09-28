@@ -233,35 +233,35 @@ hr.section-divider {
 </head>
 <body class="bg-white">
 <!-- Navbar -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-6 py-1 shadow-md transition-transform duration-300">
-  <div class="flex items-center justify-between">
-    <div class="flex items-center">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white px-8 md:px-12 py-3 shadow-md transition-transform duration-300">
+  <div class="relative flex items-center justify-between max-w-7xl mx-auto">
+
+    <!-- Logo (Sola sabit) -->
+    <div class="flex items-center -ml-2 md:-ml-16">
       <a href="index.html">
         <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-24 w-auto object-contain">
       </a>
     </div>
-    <button class="md:hidden text-secondary p-3" id="mobile-menu-btn">
-      <i class="ri-menu-line text-3xl"></i>
-    </button>
 
-    <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
-      <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sayfa</a>
-      <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
-      <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Galeri</a>
+    <!-- Menü (Sağa hizalı) -->
+    <div class="hidden md:flex items-center ml-auto mr-8 md:mr-52 flex-nowrap space-x-8 whitespace-nowrap">
+      <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-base">Ana Sayfa</a>
+      <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium text-base">Hakkımızda</a>
+      <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-base">Galeri</a>
       
       <!-- Kuruluşlarımız Dropdown -->
       <div class="relative group">
-        <button class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base flex items-center space-x-1">
+        <button class="text-secondary hover:text-primary transition-colors font-medium text-base flex items-center space-x-1">
           <span>Kuruluşlarımız</span>
           <i class="ri-arrow-down-s-line transition-transform duration-200 group-hover:rotate-180"></i>
         </button>
         <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
           <div class="py-2">
             <a href="anasinifi.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
-              <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+              <i class="ri-book-open-line mr-2"></i>Özel Ana Okulu
             </a>
             <a href="lokanta.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
-              <i class="ri-restaurant-line mr-2"></i>Lokanta
+              <i class="ri-restaurant-line mr-2"></i>BİKAD Lokanta
             </a>
             <a href="ecekoy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
               <i class="ri-home-4-line mr-2"></i>Eceköy
@@ -270,15 +270,16 @@ hr.section-divider {
         </div>
       </div>
       
-      <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">İletişim</a>
+      
     </div>
-    <button class="hidden md:block bg-primary text-white px-4 md:px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap text-sm lg:text-base">
-      Üye Ol
+     <!-- Mobile Menü Butonu (Sağda sabit) -->
+    <button class="md:hidden text-secondary p-3" id="mobile-menu-btn">
+      <i class="ri-menu-line text-3xl"></i>
     </button>
   </div>
   
   <!-- Mobil menü -->
-  <div class="hidden md:hidden bg-white absolute top-full left-0 right-0 border-t border-gray-200" id="mobile-menu">
+  <div class="hidden md:hidden bg-white fixed top-20 left-0 right-0 border-t border-gray-200 shadow-lg z-40" id="mobile-menu">
     <div class="flex flex-col space-y-4 p-4">
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sayfa</a>
       <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Hakkımızda</a>
@@ -292,10 +293,10 @@ hr.section-divider {
         </button>
         <div class="hidden ml-4 mt-2 space-y-2" id="mobile-dropdown-content">
           <a href="anasinifi.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
-            <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+            <i class="ri-book-open-line mr-2"></i>Özel Ana Okulu
           </a>
           <a href="lokanta.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
-            <i class="ri-restaurant-line mr-2"></i>Lokanta
+            <i class="ri-restaurant-line mr-2"></i>BİKAD Mutfak
           </a>
           <a href="ecekoy.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
             <i class="ri-home-4-line mr-2"></i>Eceköy
@@ -303,10 +304,8 @@ hr.section-divider {
         </div>
       </div>
       
-      <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">İletişim</a>
-      <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap mt-2">
-        Üye Ol
-      </button>
+
+     
     </div>
   </div>
 </nav>
@@ -315,7 +314,7 @@ hr.section-divider {
 <section class="hero-bg min-h-screen flex items-center relative pt-16 md:pt-20 animate-on-scroll overflow-hidden">
   <!-- Arkaplan fotoğrafı -->
   <img 
-    src="img/ecekoy/ecekoy4.jpg" 
+    src="img/anasayfa/ecekoylogo.jpg" 
     alt="Eceköy Arka Plan" 
     class="absolute inset-0 w-full h-full object-cover z-0">
 
@@ -326,19 +325,7 @@ hr.section-divider {
   <div class="relative z-10 w-full px-4 sm:px-6 md:px-8">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
       
-      <!-- Sol taraf: Yazılar -->
-      <div class="w-full md:flex-1 max-w-2xl text-center md:text-left">
-        <h1 class="text-white font-['Playfair_Display'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 md:mb-8 fade-in-up delay-100">
-          "Eceköy: Geleneksel Köy Yaşamı, Modern Yaklaşım"
-        </h1>
-        <p class="text-white/90 text-base sm:text-lg md:text-xl mb-8 fade-in-up delay-150 max-w-lg mx-auto md:mx-0">
-          Doğal üretim ve sürdürülebilir tarım faaliyetleriyle kadınların ekonomik güçlenmesine katkı sağlıyoruz.
-        </p>
-        <button class="bg-primary text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 !rounded-button font-semibold hover:bg-purple-soft/90 transition-colors whitespace-nowrap flex items-center justify-center md:justify-start mx-auto md:mx-0 fade-in-up delay-200 text-sm sm:text-base">
-          Projeye Katılın
-          <i class="ri-arrow-right-line ml-2"></i>
-        </button>
-      </div>
+      
 
       <!-- Sağ taraf: Görseller (opsiyonel) -->
       <div class="hidden lg:flex flex-1 justify-end items-center relative mt-8 lg:mt-0">
@@ -367,32 +354,18 @@ hr.section-divider {
       </div>
       <div class="space-y-6 md:space-y-8 animate-on-scroll order-1 lg:order-2">
         <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
-          Eceköy projemiz, geleneksel köy yaşamını modern yaklaşımlarla birleştirerek, doğal üretim ve sürdürülebilir tarım faaliyetleriyle kadınların ekonomik güçlenmesine katkı sağlıyor. 
-          Köy halkının birlikte çalışarak ortak hedeflere ulaşmasını destekliyoruz.
+         Eceköy markalı peynirlerimiz, 2018 yılında, Çanakkale Biga’nın 13 köyünde, Biga Kadın Çevre Kültür ve İşletme Kooperatifi ortaklarıyla birlikte, Kadın Emeğini Değerlendirme Vakfı öncülüğünde, TANAP Sosyal ve Çevresel Yatırım Programları kapsamında finanse edilen bir proje doğrultusunda üretilmeye başlanmıştır. Bu proje, kırsalda yaşayan kadınların yerel kalkınmada liderliklerini güçlendirmeyi amaçlamış ve Gümüşçay Belediyesi, Sürdürülebilirlik Akademisi ile Biga Kaymakamlığı iş birliğinde hayata geçirilmiştir. Bu süreçte, köylerde bilgilendirme toplantıları, güçlendirme ve iş geliştirme eğitimleri gerçekleştirilmiş, ayrıca Çanakkale Onsekiz Mart Üniversitesi Biga Meslek Yüksekokulu bünyesinde mesleki atölyeler ve uygulamalı eğitimler düzenlenmiştir.
+        Tüm bu çalışmaların sonucunda, kadınların liderliğinde “Çiğ Süt ve Süt Ürünleri” işleme tesisi kurulmuş ve köylerde kadınların evlerinin yanında mikro mandıralar faaliyete geçmiştir.
         </p>
 
-        <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
-          Köyde üretilen doğal ürünleri şehirle buluşturarak ekonomik değer yaratıyor, geleneksel tarım yöntemlerini modern tekniklerle birleştirerek doğal ve organik üretim yapıyoruz. 
-          Bu sayede hem köy yaşamını koruyor hem de kadınların ekonomik bağımsızlığını destekliyoruz.
-        </p>
+     
         <div class="grid grid-cols-3 gap-4 md:gap-8 pt-6 md:pt-8">
-          <div class="text-center">
-            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">150+</div>
-            <div class="text-gray-600 text-xs sm:text-sm md:text-base">Köy Ailesi</div>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">25+</div>
-            <div class="text-gray-600 text-xs sm:text-sm md:text-base">Ürün Çeşidi</div>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">₺2.5M</div>
-            <div class="text-gray-600 text-xs sm:text-sm md:text-base">Yıllık Üretim</div>
-          </div>
+          
         </div>
-        <a href="index.html" class="bg-primary text-white px-6 md:px-8 py-3 md:py-4 !rounded-button font-semibold hover:bg-purple-soft/90 transition-colors whitespace-nowrap flex items-center mt-6 md:mt-8 text-sm sm:text-base inline-block">
-          Ana Sayfaya Dön
+        <a  class="bg-primary text-white px-6 md:px-8 py-3 md:py-4 !rounded-button font-semibold hover:bg-purple-soft/90 transition-colors whitespace-nowrap flex items-center mt-6 md:mt-8 text-sm sm:text-base inline-block">
+          Hakkımızda
           <div class="w-4 h-4 md:w-5 md:h-5 flex items-center justify-center ml-2">
-            <i class="ri-arrow-right-line"></i>
+           
           </div>
         </a>
       </div>
@@ -402,78 +375,68 @@ hr.section-divider {
 
 <hr class="section-divider">
 
-<!-- Eceköy Faaliyetleri -->
+<!-- Eceköy Ürünleri -->
 <section class="py-12 md:py-20 px-4 sm:px-6 md:px-8 bg-purple-cream">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-8 md:mb-16 animate-on-scroll">Eceköy Faaliyetleri</h2>
+    <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-8 md:mb-16 animate-on-scroll">Eceköy Ürünleri</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
+      <!-- Rulo Peyniri -->
       <div class="bg-white rounded-lg overflow-hidden shadow-lg animate-on-scroll">
-        <img src="img/ecekoy/ecekoy1.jpg"
-          alt="Sürdürülebilir Tarım"
+        <img src="img/ecekoy/rulo.jpg"
+          alt="Rulo Peyniri"
           class="w-full h-48 sm:h-56 md:h-64 object-cover fade-in-right">
         <div class="p-4 sm:p-6">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2 sm:gap-0">
-            <h3 class="text-xl sm:text-2xl font-['Playfair_Display'] font-bold">Sürdürülebilir Tarım</h3>
-            <div class="bg-orange-100 text-primary px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Doğal Üretim</div>
-          </div>
-          <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
-            Geleneksel tarım yöntemlerini modern tekniklerle birleştirerek doğal ve organik üretim yapıyoruz.
+          <h3 class="text-xl sm:text-2xl font-['Playfair_Display'] font-bold mb-2">Rulo Peyniri</h3>
+          <p class="text-gray-600 text-sm sm:text-base">
+            Taze ve kremamsı dokusuyla her sofrayı zenginleştiren özel rulo peynir çeşitlerimiz.
           </p>
-          <a href="#" class="text-primary font-medium flex items-center hover:text-primary/80 transition-colors text-sm sm:text-base">
-            Detaylı Bilgi
-            <div class="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center ml-1">
-              <i class="ri-arrow-right-line"></i>
-            </div>
-          </a>
         </div>
       </div>
 
+      <!-- Sepet Peyniri -->
       <div class="bg-white rounded-lg overflow-hidden shadow-lg animate-on-scroll">
-        <img src="img/ecekoy/ecekoy4.jpg"
-          alt="Doğal Üretim"
+        <img src="img/ecekoy/sepet.jpg"
+          alt="Sepet Peyniri"
           class="w-full h-48 sm:h-56 md:h-64 object-cover bounce-in">
         <div class="p-4 sm:p-6">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2 sm:gap-0">
-            <h3 class="text-xl sm:text-2xl font-['Playfair_Display'] font-bold">Doğal Üretim</h3>
-            <div class="bg-orange-100 text-primary px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Organik</div>
-          </div>
-          <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
-            Köyde üretilen doğal ürünleri şehirle buluşturarak ekonomik değer yaratıyoruz.
+          <h3 class="text-xl sm:text-2xl font-['Playfair_Display'] font-bold mb-2">Sepet Peyniri</h3>
+          <p class="text-gray-600 text-sm sm:text-base">
+            Geleneksel yöntemlerle hazırlanmış, doğal aromasını koruyan eşsiz sepet peynirlerimiz.
           </p>
-          <a href="#" class="text-primary font-medium flex items-center hover:text-primary/80 transition-colors text-sm sm:text-base">
-            Detaylı Bilgi
-            <div class="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center ml-1">
-              <i class="ri-arrow-right-line"></i>
-            </div>
-          </a>
         </div>
       </div>
 
+      <!-- Lor Çeşitleri -->
       <div class="bg-white rounded-lg overflow-hidden shadow-lg animate-on-scroll">
-        <img src="img/ecekoy/ecekoy5.jpg"
-          alt="Köy Yaşamı"
+        <img src="img/ecekoy/lor.jpg"
+          alt="Lor Çeşitleri"
           class="w-full h-48 sm:h-56 md:h-64 object-cover slide-in-down">
         <div class="p-4 sm:p-6">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2 sm:gap-0">
-            <h3 class="text-xl sm:text-2xl font-['Playfair_Display'] font-bold">Köy Yaşamı</h3>
-            <div class="bg-orange-100 text-primary px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">Geleneksel</div>
-          </div>
-          <p class="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
-            Geleneksel köy yaşamını koruyarak kadınların ekonomik güçlenmesine katkı sağlıyoruz.
+          <h3 class="text-xl sm:text-2xl font-['Playfair_Display'] font-bold mb-2">Lor Çeşitleri</h3>
+          <p class="text-gray-600 text-sm sm:text-base">
+            Hafif ve lezzetli lor çeşitlerimiz kahvaltıdan tatlılara kadar her öğünde keyifle tüketilir.
           </p>
-          <a href="#" class="text-primary font-medium flex items-center hover:text-primary/80 transition-colors text-sm sm:text-base">
-            Detaylı Bilgi
-            <div class="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center ml-1">
-              <i class="ri-arrow-right-line"></i>
-            </div>
-          </a>
         </div>
       </div>
 
     </div>
+
+    <!-- Satın Al Butonu -->
+    <div class="mt-12 text-center">
+       <a href="https://www.ecekoy.com/magaza/"
+        class="inline-block bg-primary text-white font-['Playfair_Display'] font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-primary/90 transition">
+        Satın Al
+      </a>
+    </div>
+
   </div>
 </section>
+
+
+
+
+
 
 <hr class="section-divider">
 
@@ -535,108 +498,127 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- Footer -->
 <footer class="bg-secondary text-white py-8 md:py-12 lg:py-16 px-4 md:px-8">
   <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+      
+      <!-- LOGO VE AÇIKLAMA -->
       <div class="space-y-4 md:space-y-6 animate-on-scroll">
-<div class="text-white font-['Pacifico'] text-2xl md:text-3xl mb-3 md:mb-4 fade-in-up">
-Kadın Kooperatifi
-</div>
-<p class="text-white/80 leading-relaxed text-sm sm:text-base">
-Eğitim, el sanatları ve topluluk desteği ile değişimi güçlendiriyoruz. Birlikte, daha parlak bir gelecek için kalıcı etki yaratıyoruz.
-</p>
-<div class="flex space-x-3 md:space-x-4">
-<a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-<i class="ri-facebook-fill text-sm md:text-base"></i>
-</a>
-<a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-<i class="ri-twitter-fill text-sm md:text-base"></i>
-</a>
-<a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-<i class="ri-instagram-fill text-sm md:text-base"></i>
-</a>
-<a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-<i class="ri-linkedin-fill text-sm md:text-base"></i>
-</a>
-</div>
-</div>
-<div class="space-y-6 animate-on-scroll">
-<h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 fade-in-left">Hızlı Bağlantılar</h3>
-<ul class="space-y-3">
-<li><a href="index.html" class="text-white/80 hover:text-white transition-colors">Ana Sayfa</a></li>
-<li><a href="tarihimiz.html" class="text-white/80 hover:text-white transition-colors">Hakkımızda</a></li>
-<li><a href="galeri.html" class="text-white/80 hover:text-white transition-colors">Galeri</a></li>
-<li><a href="lokanta.html" class="text-white/80 hover:text-white transition-colors">Lokanta</a></li>
-<li><a href="iletisim.html" class="text-white/80 hover:text-white transition-colors">İletişim</a></li>
-</ul>
-</div>
-<div class="space-y-6 animate-on-scroll">
-<h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 fade-in-right">Programlarımız</h3>
-<ul class="space-y-3">
-<li><a href="#" class="text-white/80 hover:text-white transition-colors">Eğitim</a></li>
-<li><a href="#" class="text-white/80 hover:text-white transition-colors">El Sanatları</a></li>
-<li><a href="#" class="text-white/80 hover:text-white transition-colors">Topluluk Desteği</a></li>
-<li><a href="#" class="text-white/80 hover:text-white transition-colors">Kadın Güçlendirme</a></li>
-<li><a href="#" class="text-white/80 hover:text-white transition-colors">Beceri Geliştirme</a></li>
-</ul>
-</div>
-<div class="space-y-6 animate-on-scroll">
-<h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 bounce-in">İletişim Bilgileri</h3>
-<div class="space-y-4">
-<div class="flex items-center space-x-3">
-<div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-<i class="ri-map-pin-line text-primary"></i>
-</div>
-<div>
-<p class="text-white/80 text-sm">123 Kooperatif Caddesi</p>
-<p class="text-white/80 text-sm">Kadın Merkezi, TC 12345</p>
-</div>
-</div>
-<div class="flex items-center space-x-3">
-<div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-<i class="ri-phone-line text-primary"></i>
-</div>
-<div>
-<p class="text-white/80 text-sm">+90 (555) 123-4567</p>
-</div>
-</div>
-<div class="flex items-center space-x-3">
-<div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-<i class="ri-mail-line text-primary"></i>
-</div>
-<div>
-<p class="text-white/80 text-sm">info@kadinkooperatifi.org</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+        <div class="mb-3 md:mb-4 fade-in-up">
+          <img src="BikafBeyazLogo.jpg" alt="Kadın Kooperatifi Logo" class="h-10 md:h-12 lg:h-14 object-contain">
+        </div>
+        <p class="text-white/80 leading-relaxed text-sm sm:text-base">
+          Eğitim, el sanatları ve topluluk desteği ile değişimi güçlendiriyoruz. Birlikte, daha parlak bir gelecek için kalıcı etki yaratıyoruz.
+        </p>
+      
+      </div>
+
+      <!-- HIZLI BAĞLANTILAR -->
+      <div class="space-y-6 animate-on-scroll">
+        <h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 fade-in-left">Hızlı Bağlantılar</h3>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="text-white/80 hover:text-white transition-colors">Ana Sayfa</a></li>
+          <li><a href="tarihimiz.html" class="text-white/80 hover:text-white transition-colors">Tarihimiz</a></li>
+          <li><a href="galeri.html" class="text-white/80 hover:text-white transition-colors">Galeri</a></li>
+          <li><a href="anasinifi.html" class="text-white/80 hover:text-white transition-colors">Özel Ana Okulu</a></li>
+          <li><a href="lokanta.html" class="text-white/80 hover:text-white transition-colors">BİKAD Mutfak</a></li>
+          <li><a href="ecekoy.html" class="text-white/80 hover:text-white transition-colors">Eceköy</a></li>
+        </ul>
+      </div>
+
+      <!-- İLETİŞİM BİLGİLERİ -->
+      <div class="space-y-6 animate-on-scroll">
+        <h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 bounce-in">İletişim Bilgileri</h3>
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+              <i class="ri-phone-line text-primary"></i>
+            </div>
+            <div>
+              <p class="text-white/80 text-sm">+90 530 263 51 55</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+              <i class="ri-mail-line text-primary"></i>
+            </div>
+            <div>
+              <p class="text-white/80 text-sm">info@ecekoy.com</p>
+              <p class="text-white/80 text-sm">satis@ecekoy.com</p>
+            </div>
+          </div>
+           <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+              <i class="ri-home-line text-primary"></i>
+            </div>
+            <div>
+              <p class="text-white/80 text-sm">Büyük Çınarlık 1 Çıkmazı No:3,Gümüşçay,Biga,Çanakkale</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <!-- ALT KISIM -->
 <div class="border-t border-white/20 pt-8">
-<div class="flex flex-col md:flex-row justify-between items-center">
-<div class="text-white/80 text-sm mb-4 md:mb-0 text-center md:text-left">
-© 2024 Kadın Kooperatifi. Tüm hakları saklıdır.
+  <div class="flex justify-center items-center">
+    <div class="text-white/80 text-sm text-center">
+      © 2025 Kadın Kooperatifi. Tüm hakları saklıdır.
+    </div>
+  </div>
 </div>
-<div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-sm text-center">
-<a href="#" class="text-white/80 hover:text-white transition-colors">Gizlilik Politikası</a>
-<a href="#" class="text-white/80 hover:text-white transition-colors">Kullanım Şartları</a>
-<a href="#" class="text-white/80 hover:text-white transition-colors">Çerez Politikası</a>
-</div>
-</div>
-</div>
-</div>
+
 </footer>
+
 
 <!-- JavaScript -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Mobil menü
   const mobileMenuButton = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  
+
+  // Mobil dropdown
+  const dropdownBtn = document.getElementById('mobile-dropdown-btn');
+  const dropdownContent = document.getElementById('mobile-dropdown-content');
+  const dropdownArrow = document.getElementById('mobile-dropdown-arrow');
+
+  // Mobil menüyü aç/kapat
   if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', function() {
+    mobileMenuButton.addEventListener('click', function(event) {
       mobileMenu.classList.toggle('hidden');
+
+      // Icon değiştirme
+      const icon = mobileMenuButton.querySelector('i');
+      if (mobileMenu.classList.contains('hidden')) {
+        icon.className = 'ri-menu-line text-3xl';
+      } else {
+        icon.className = 'ri-close-line text-3xl';
+      }
     });
   }
 
-  // Scroll animations
+  // Mobil dropdown menü aç/kapat
+  if (dropdownBtn && dropdownContent) {
+    dropdownBtn.addEventListener('click', function(event) {
+      event.stopPropagation(); // Dışarı tıkla listener’ına takılmasın
+      dropdownContent.classList.toggle('hidden');
+      dropdownArrow.classList.toggle('rotate-180'); // arrow dönsün
+    });
+  }
+
+  // Dışarı tıklandığında menüyü ve dropdown'u kapat
+  document.addEventListener('click', function(event) {
+    if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+      mobileMenu.classList.add('hidden');
+      const icon = mobileMenuButton.querySelector('i');
+      icon.className = 'ri-menu-line text-3xl';
+    }
+    if (!dropdownBtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+      dropdownContent.classList.add('hidden');
+      dropdownArrow.classList.remove('rotate-180');
+    }
+  });
+
+  // Scroll animasyonları
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -647,7 +629,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (entry.isIntersecting) {
         entry.target.classList.add('animate');
         
-        const fadeElements = entry.target.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in, .slide-in-up, .slide-in-down, .bounce-in');
+        const fadeElements = entry.target.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in');
         fadeElements.forEach((el, index) => {
           setTimeout(() => {
             el.style.opacity = '1';
@@ -663,45 +645,44 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(el);
   });
 
-  // Gallery hover effects
-  const galleryImages = document.querySelectorAll('.overflow-hidden.rounded-lg');
-  galleryImages.forEach(image => {
-    image.addEventListener('mouseenter', function() {
-      this.style.transform = 'scale(1.05)';
-      this.style.transition = 'transform 0.3s ease';
-    });
-    image.addEventListener('mouseleave', function() {
-      this.style.transform = 'scale(1)';
+  // Gallery filtreleme
+  const filterButtons = document.querySelectorAll('button');
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      filterButtons.forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-white');
+        btn.classList.add('bg-white', 'text-gray-600');
+      });
+      this.classList.remove('bg-white', 'text-gray-600');
+      this.classList.add('bg-primary', 'text-white');
     });
   });
 });
 
+// Navbar scroll animasyonu
 let lastScrollTop = 0;
 const navbar = document.querySelector('nav');
 let isScrollingDown = false;
 
 window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > lastScrollTop && !isScrollingDown && scrollTop > 100) {
-        // Aşağı scroll
-        navbar.style.transform = 'translateY(-100%)';
-        isScrollingDown = true;
-    } else if (scrollTop < lastScrollTop && isScrollingDown) {
-        // Yukarı scroll
-        navbar.style.transform = 'translateY(0)';
-        isScrollingDown = false;
-    }
-    
-    lastScrollTop = scrollTop;
-});
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-// Sayfanın en üstünde navbar'ı her zaman göster
-window.addEventListener('scroll', () => {
-    if (window.scrollY < 100) {
-        navbar.style.transform = 'translateY(0)';
-    }
+  if (scrollTop > lastScrollTop && !isScrollingDown && scrollTop > 100) {
+      navbar.style.transform = 'translateY(-100%)';
+      isScrollingDown = true;
+  } else if (scrollTop < lastScrollTop && isScrollingDown) {
+      navbar.style.transform = 'translateY(0)';
+      isScrollingDown = false;
+  }
+
+  // Sayfanın en üstünde navbar'ı her zaman göster
+  if (window.scrollY < 100) {
+      navbar.style.transform = 'translateY(0)';
+  }
+
+  lastScrollTop = scrollTop;
 });
 </script>
+
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kadın Kooperatifi - Ana Sınıfı</title>
+<title>Kadın Kooperatifi - Eceköy</title>
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>
 tailwind.config = {
@@ -41,7 +41,7 @@ tailwind.config = {
 <style>
 :where([class^="ri-"])::before { content: "\f3c2"; }
 .hero-bg {
-background-image: url('https://readdy.ai/api/search-image?query=happy%20children%20in%20modern%20kindergarten%20classroom%20engaged%20in%20educational%20activities%20bright%20natural%20lighting%20colorful%20learning%20environment%20with%20educational%20toys%20and%20materials%20warm%20atmosphere&width=1920&height=800&seq=anasinifi001&orientation=landscape');
+background-image: url('https://readdy.ai/api/search-image?query=traditional%20turkish%20village%20landscape%20with%20gardens%20agricultural%20fields%20rural%20setting%20natural%20lighting%20peaceful%20atmosphere%20eceköy%20village%20scene%20hero%20background&width=1920&height=800&seq=ecekoy-hero&orientation=landscape');
 background-size: cover;
 background-position: center;
 }
@@ -209,13 +209,14 @@ hr.section-divider {
 }
 
 .bounce-in {
-  animation: bounceIn 0.8s ease-out forwards;
+  animation: bounceIn 1s ease-out forwards;
   opacity: 0;
   transform: scale(0.3);
 }
 
-.typewriter-text {
+.typewriter {
   overflow: hidden;
+  white-space: nowrap;
   border-right: 3px solid #8B3E2F;
   animation: typewriter 3s steps(40, end), blink 0.75s step-end infinite;
 }
@@ -232,33 +233,35 @@ hr.section-divider {
 </head>
 <body class="bg-white">
 <!-- Navbar -->
-<!-- Navbar -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white px-4 md:px-6 py-1 shadow-md transition-transform duration-300">
-  <div class="flex items-center justify-between">
-    <div class="flex items-center">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white px-8 md:px-12 py-3 shadow-md transition-transform duration-300">
+  <div class="relative flex items-center justify-between max-w-7xl mx-auto">
+
+    <!-- Logo (Sola sabit) -->
+    <div class="flex items-center -ml-2 md:-ml-16">
       <a href="index.html">
         <img src="logo.png" alt="Kadın Kooperatifi Logo" class="h-24 w-auto object-contain">
       </a>
-    </div> <button class="md:hidden text-secondary p-3" id="mobile-menu-btn"> <i class="ri-menu-line text-3xl"></i> </button>
+    </div>
 
-    <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
-      <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Ana Sayfa</a>
-      <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Hakkımızda</a>
-      <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Galeri</a>
+    <!-- Menü (Sağa hizalı) -->
+    <div class="hidden md:flex items-center ml-auto mr-8 md:mr-52 flex-nowrap space-x-8 whitespace-nowrap">
+      <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium text-base">Ana Sayfa</a>
+      <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium text-base">Hakkımızda</a>
+      <a href="galeri.html" class="text-secondary hover:text-primary transition-colors font-medium text-base">Galeri</a>
       
       <!-- Kuruluşlarımız Dropdown -->
       <div class="relative group">
-        <button class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base flex items-center space-x-1">
+        <button class="text-secondary hover:text-primary transition-colors font-medium text-base flex items-center space-x-1">
           <span>Kuruluşlarımız</span>
           <i class="ri-arrow-down-s-line transition-transform duration-200 group-hover:rotate-180"></i>
         </button>
         <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
           <div class="py-2">
             <a href="anasinifi.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
-              <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+              <i class="ri-book-open-line mr-2"></i>Özel Ana Okulu
             </a>
             <a href="lokanta.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
-              <i class="ri-restaurant-line mr-2"></i>Lokanta
+              <i class="ri-restaurant-line mr-2"></i>BİKAD Lokanta
             </a>
             <a href="ecekoy.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-light hover:text-primary transition-colors">
               <i class="ri-home-4-line mr-2"></i>Eceköy
@@ -266,16 +269,18 @@ hr.section-divider {
           </div>
         </div>
       </div>
-      <a href="yonetim-kurulu.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">Yönetim Kurulu</a>
-      <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium text-sm lg:text-base">İletişim</a>
+      
+  
     </div>
-    <button class="hidden md:block bg-primary text-white px-4 md:px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap text-sm lg:text-base">
-      Üye Ol
+    
+    <!-- Mobile Menü Butonu (Sağda sabit) -->
+    <button class="md:hidden text-secondary p-3" id="mobile-menu-btn">
+      <i class="ri-menu-line text-3xl"></i>
     </button>
   </div>
   
   <!-- Mobil menü -->
-  <div class="hidden md:hidden bg-white absolute top-full left-0 right-0 border-t border-gray-200" id="mobile-menu">
+  <div class="hidden md:hidden bg-white fixed top-20 left-0 right-0 border-t border-gray-200 shadow-lg z-40" id="mobile-menu">
     <div class="flex flex-col space-y-4 p-4">
       <a href="index.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Ana Sayfa</a>
       <a href="tarihimiz.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Hakkımızda</a>
@@ -289,10 +294,10 @@ hr.section-divider {
         </button>
         <div class="hidden ml-4 mt-2 space-y-2" id="mobile-dropdown-content">
           <a href="anasinifi.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
-            <i class="ri-book-open-line mr-2"></i>Ana Sınıfı
+            <i class="ri-book-open-line mr-2"></i>Özel Ana Okulu
           </a>
           <a href="lokanta.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
-            <i class="ri-restaurant-line mr-2"></i>Lokanta
+            <i class="ri-restaurant-line mr-2"></i>BİKAD Mutfak
           </a>
           <a href="ecekoy.html" class="block text-secondary hover:text-primary transition-colors font-medium py-2 text-sm">
             <i class="ri-home-4-line mr-2"></i>Eceköy
@@ -300,11 +305,8 @@ hr.section-divider {
         </div>
       </div>
       
-      <a href="yonetim-kurulu.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">Yönetim Kurulu</a>
-      <a href="iletisim.html" class="text-secondary hover:text-primary transition-colors font-medium py-2">İletişim</a>
-      <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap mt-2">
-        Üye Ol
-      </button>
+
+     
     </div>
   </div>
 </nav>
@@ -313,132 +315,71 @@ hr.section-divider {
 <section class="hero-bg min-h-screen flex items-center relative pt-16 md:pt-20 animate-on-scroll overflow-hidden">
   <!-- Arkaplan fotoğrafı -->
   <img 
-    src="img/anasınıfı/egitim-gelisim.jpg" 
-    alt="Hero Arka Plan" 
+    src="img/anasayfa/anasınıfılogo.jpg" 
+    alt="Eceköy Arka Plan" 
     class="absolute inset-0 w-full h-full object-cover z-0">
-  
-  <!-- Koyu overlay (fotoğrafın üstüne karartma efekti) -->
+
+  <!-- Koyu overlay -->
   <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/60 to-transparent z-0"></div>
 
   <!-- İçerik -->
   <div class="relative z-10 w-full px-4 sm:px-6 md:px-8">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
       
-      <!-- Sol kısım: Metinler -->
-      <div class="w-full md:flex-1 max-w-2xl text-center md:text-left">
-        <h1 class="text-white font-['Playfair_Display'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 md:mb-8 fade-in-up delay-100">
-          "Geleceğin Temelleri Burada Atılıyor"
-        </h1>
-        <p class="text-white/90 text-base sm:text-lg md:text-xl mb-8 fade-in-up delay-150 max-w-lg mx-auto md:mx-0">
-          Çocuklarınızın gelişimini destekleyen, güvenli ve sevgi dolu bir öğrenme ortamı.
-        </p>
-        <button class="bg-primary text-white px-4 sm:px-6 md:px-8 py-3 md:py-4 !rounded-button font-semibold hover:bg-purple-soft/90 transition-colors whitespace-nowrap flex items-center justify-center md:justify-start mx-auto md:mx-0 fade-in-up delay-200 text-sm sm:text-base">
-          Kayıt Ol
-          <i class="ri-arrow-right-line ml-2"></i>
-        </button>
+      <!-- Sol taraf: Yazılar -->
+   
+        
       </div>
 
-      <!-- Sağ kısım: Görseller (Opsiyonel) -->
+      <!-- Sağ taraf: Görseller (opsiyonel) -->
       <div class="hidden lg:flex flex-1 justify-end items-center relative mt-8 lg:mt-0">
-        <!-- Ekstra görseller buraya gelecek -->
+        <!-- Ekstra görseller buraya gelebilir -->
       </div>
     </div>
   </div>
 </section>
 
 
-
 <hr class="section-divider">
 
-<!-- Eğitim Programları -->
+<!-- Eceköy Hakkında -->
 <section class="py-12 md:py-20 px-4 sm:px-6 md:px-8 bg-purple-cream">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-4">Eğitim Programları</h2>
-    <p class="text-center text-gray-600 text-base sm:text-lg mb-8 md:mb-16">Çocuklarınızın doğal merakını destekleyen, oyun temelli öğrenme yaklaşımı</p>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-      <!-- Program 1 -->
-      <div class="bg-white rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow animate-on-scroll">
-        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-          <i class="ri-palette-line text-3xl text-primary"></i>
-        </div>
-        <h3 class="text-xl md:text-2xl font-['Playfair_Display'] font-semibold mb-4">Sanat ve Yaratıcılık</h3>
-        <p class="text-gray-600 mb-6">Çocukların hayal güçlerini geliştiren, el-göz koordinasyonunu artıran sanat etkinlikleri.</p>
-        <ul class="space-y-2 text-sm text-gray-600">
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Resim ve boyama</li>
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>El sanatları</li>
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Müzik etkinlikleri</li>
-        </ul>
-      </div>
+    <h2 class="text-center text-2xl sm:text-3xl md:text-4xl font-['Playfair_Display'] font-bold mb-6 animate-on-scroll typewriter-text">
+      <span class="text-primary">Anaokulumuz</span>  
+      Çocuklara sevgi dolu ve eğlenceli bir öğrenme ortamı sunuyor
+    </h2>
 
-      <!-- Program 2 -->
-      <div class="bg-white rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow animate-on-scroll">
-        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-          <i class="ri-book-open-line text-3xl text-primary"></i>
-        </div>
-        <h3 class="text-xl md:text-2xl font-['Playfair_Display'] font-semibold mb-4">Dil Gelişimi</h3>
-        <p class="text-gray-600 mb-6">Türkçe dil becerilerini geliştiren, okuma alışkanlığı kazandıran programlar.</p>
-        <ul class="space-y-2 text-sm text-gray-600">
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Hikaye okuma</li>
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Şiir öğrenme</li>
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Kelime oyunları</li>
-        </ul>
-      </div>
 
-      <!-- Program 3 -->
-      <div class="bg-white rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow animate-on-scroll">
-        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-          <i class="ri-calculator-line text-3xl text-primary"></i>
-        </div>
-        <h3 class="text-xl md:text-2xl font-['Playfair_Display'] font-semibold mb-4">Matematik ve Mantık</h3>
-        <p class="text-gray-600 mb-6">Sayıları, şekilleri ve temel matematik kavramlarını eğlenceli yollarla öğrenme.</p>
-        <ul class="space-y-2 text-sm text-gray-600">
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Sayı sayma</li>
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Geometrik şekiller</li>
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Beyin jimnastiği</li>
-        </ul>
+    <div class="mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+      <div class="relative animate-on-scroll order-2 lg:order-1">
+        <img src="img/anasinifi/anasinifi7.jpg"
+        alt="Eceköy Village"
+        class="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover object-top rounded-lg shadow-xl fade-in-left">
       </div>
+      <div class="space-y-6 md:space-y-8 animate-on-scroll order-1 lg:order-2">
+        <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+          Bizler Özel Biga Anaokulu olarak kadınların ve çocukların yaşam kalitelerini arttırmayı amaçlıyoruz. Özellikle çocuklarımızın okul öncesi eğitim almasını çok önemsiyoruz. Erken çocukluk döneminde verilen eğitimin öneminin bilincinde olarak 2010 yılında Biga Kadın ve Çocuk Merkezimizi kurarak eğitim çalışmalarımıza başladık.
 
-      <!-- Program 4 -->
-      <div class="bg-white rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow animate-on-scroll">
-        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-          <i class="ri-leaf-line text-3xl text-primary"></i>
-        </div>
-        <h3 class="text-xl md:text-2xl font-['Playfair_Display'] font-semibold mb-4">Doğa ve Bilim</h3>
-        <p class="text-gray-600 mb-6">Çocukların doğa sevgisini geliştiren, bilimsel merak uyandıran etkinlikler.</p>
-        <ul class="space-y-2 text-sm text-gray-600">
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Bahçe etkinlikleri</li>
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Basit deneyler</li>
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Hayvan sevgisi</li>
-        </ul>
-      </div>
+2021 yılında Milli Eğitim Bakanlığı 'na bağlı olarak "Özel Biga Anaokulu" ismiyle hizmet vermeye devam ediyoruz.
 
-      <!-- Program 5 -->
-      <div class="bg-white rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow animate-on-scroll">
-        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-          <i class="ri-run-line text-3xl text-primary"></i>
-        </div>
-        <h3 class="text-xl md:text-2xl font-['Playfair_Display'] font-semibold mb-4">Fiziksel Gelişim</h3>
-        <p class="text-gray-600 mb-6">Çocukların motor becerilerini geliştiren, sağlıklı alışkanlıklar kazandıran aktiviteler.</p>
-        <ul class="space-y-2 text-sm text-gray-600">
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Jimnastik</li>
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Dans ve oyunlar</li>
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Koordinasyon egzersizleri</li>
-        </ul>
-      </div>
+Okulumuzda çocuklarımıza oyun yoluyla öğrenme, sevgi dolu ve güvenli bir eğitim ortamı sunuyoruz  Her çocuğun kendi potansiyelini keşfettiği bir öğrenme  modelini  benimsiyoruz.
+ 
 
-      <!-- Program 6 -->
-      <div class="bg-white rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow animate-on-scroll">
-        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-          <i class="ri-heart-line text-3xl text-primary"></i>
-        </div>
-        <h3 class="text-xl md:text-2xl font-['Playfair_Display'] font-semibold mb-4">Sosyal Duygusal Gelişim</h3>
-        <p class="text-gray-600 mb-6">Empati, işbirliği ve özgüven geliştiren sosyal etkinlikler.</p>
-        <ul class="space-y-2 text-sm text-gray-600">
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Grup oyunları</li>
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Duygu ifadesi</li>
-          <li class="flex items-center"><i class="ri-check-line text-primary mr-2"></i>Paylaşım becerileri</li>
-        </ul>
+        </p>
+
+        <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+          Bu anlayışla çocuklarımızın yalnızca akademik becerilerini değil, aynı  zamanda özgüven, empati, sorumluluk ve yaratıcılık gibi  yaşam boyu gerekli değerlerini de geliştirmeyi, onları geleceğe donanımlı bireyler olarak hedefliyoruz.
+
+Alternatif programlarimızın geliştirilmesi ve uygulanmasında Kadın Emeğini Değerlendirme Vakfı (KEDV)' den eğitim ve teknik destek alınmıştır.
+        </p>
+        
+        <a" class="bg-primary text-white px-6 md:px-8 py-3 md:py-4 !rounded-button font-semibold hover:bg-purple-soft/90 transition-colors whitespace-nowrap flex items-center mt-6 md:mt-8 text-sm sm:text-base inline-block">
+          Hakkımızda
+          <div class="w-4 h-4 md:w-5 md:h-5 flex items-center justify-center ml-2">
+          
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -446,314 +387,238 @@ hr.section-divider {
 
 <hr class="section-divider">
 
-<!-- Günlük Program -->
-<section class="py-12 md:py-20 px-4 sm:px-6 md:px-8 bg-purple-light">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-4">Günlük Program</h2>
-    <p class="text-center text-gray-600 text-base sm:text-lg mb-8 md:mb-16">Çocuklarınızın gününü nasıl geçirdiğini keşfedin</p>
-    
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-      <div class="space-y-8">
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">08:00</div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Karşılama ve Kahvaltı</h3>
-            <p class="text-gray-600">Çocuklar sıcak bir karşılama ile güne başlar ve sağlıklı bir kahvaltı yapar.</p>
-          </div>
-        </div>
-        
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">09:00</div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Sabah Etkinlikleri</h3>
-            <p class="text-gray-600">Günlük program tanıtılır, hava durumu ve takvim etkinlikleri yapılır.</p>
-          </div>
-        </div>
-        
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">09:30</div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Eğitim Etkinlikleri</h3>
-            <p class="text-gray-600">Yaş gruplarına uygun, eğitici ve eğlenceli aktiviteler gerçekleştirilir.</p>
-          </div>
-        </div>
-        
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">10:30</div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Oyun Zamanı</h3>
-            <p class="text-gray-600">Serbest oyun ve arkadaşlarla sosyal etkileşim fırsatı.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="space-y-8">
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">11:30</div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Öğle Yemeği</h3>
-            <p class="text-gray-600">Besleyici ve lezzetli öğle yemeği, hijyen kurallarına uygun şekilde.</p>
-          </div>
-        </div>
-        
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">12:30</div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Dinlenme Zamanı</h3>
-            <p class="text-gray-600">Çocuklar için özel hazırlanmış dinlenme alanlarında dinlenme.</p>
-          </div>
-        </div>
-        
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">14:00</div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Öğleden Sonra Etkinlikleri</h3>
-            <p class="text-gray-600">Sanat, müzik, oyun ve öğrenme etkinlikleri devam eder.</p>
-          </div>
-        </div>
-        
-        <div class="flex items-start space-x-4">
-          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">15:30</div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Gün Sonu ve Veda</h3>
-            <p class="text-gray-600">Günün özeti, ebeveynlere bilgi aktarımı ve güvenli vedalaşma.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- Öğretmenlerimiz -->
+<!-- Eceköy Faaliyetleri -->
+<!-- Eceköy Faaliyetleri -->
 <section class="py-12 md:py-20 px-4 sm:px-6 md:px-8 bg-purple-cream">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-4">Deneyimli Öğretmenlerimiz</h2>
-    <p class="text-center text-gray-600 text-base sm:text-lg mb-8 md:mb-16">Çocuk gelişimi konusunda uzman, sevgi dolu öğretmenlerimiz</p>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow animate-on-scroll">
-        <img src="https://readdy.ai/api/search-image?query=professional%20female%20teacher%20with%20warm%20smile%20standing%20in%20classroom%20wearing%20casual%20professional%20attire%20friendly%20expression%20educational%20environment&width=300&height=400&seq=teacher1&orientation=portrait" 
-             alt="Öğretmen Ayşe" 
-             class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-        <h3 class="text-xl font-semibold mb-2">Ayşe Öğretmen</h3>
-        <p class="text-primary font-medium mb-2">Ana Sınıfı Öğretmeni</p>
-        <p class="text-gray-600 text-sm">10 yıllık deneyim ile çocuk gelişimi uzmanı</p>
+    <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-8 md:mb-16 animate-on-scroll">Alternatif Programlarımız</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg animate-on-scroll">
+        <img src="img/anasinifi/anasinifi3.jpg"
+          alt="Toplumsal Cinsiyet Eşitliği Eğitimi"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover fade-in-right">
+        <div class="p-4 sm:p-6">
+          <h3 class="text-xl sm:text-2xl font-['Playfair_Display'] font-bold mb-2">Toplumsal Cinsiyet Eşitliği Eğitimi</h3>
+          <p class="text-gray-600 text-sm sm:text-base">
+            Çocuklara eşitlik ve paylaşmayı öğretiyoruz.
+          </p>
+        </div>
       </div>
-      
-      <div class="bg-white rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow animate-on-scroll">
-        <img src="https://readdy.ai/api/search-image?query=young%20female%20teacher%20with%20enthusiastic%20expression%20in%20colorful%20classroom%20wearing%20bright%20clothing%20educational%20setting&width=300&height=400&seq=teacher2&orientation=portrait" 
-             alt="Öğretmen Fatma" 
-             class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-        <h3 class="text-xl font-semibold mb-2">Fatma Öğretmen</h3>
-        <p class="text-primary font-medium mb-2">Sanat ve Yaratıcılık</p>
-        <p class="text-gray-600 text-sm">Güzel sanatlar mezunu, çocuk sanat terapisi uzmanı</p>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg animate-on-scroll">
+        <img src="img/anasinifi/anasinifi9.jpg"
+          alt="Yaparak Yaşayarak Öğrenme"
+          class="w-full h-48 sm:h-56 md:h-64 object-cover bounce-in">
+        <div class="p-4 sm:p-6">
+          <h3 class="text-xl sm:text-2xl font-['Playfair_Display'] font-bold mb-2">Yaparak Yaşayarak Öğrenme</h3>
+          <p class="text-gray-600 text-sm sm:text-base">
+            Oyun ve etkinliklerle öğrenmeyi eğlenceli hâle getiriyoruz.
+          </p>
+        </div>
       </div>
-      
-      <div class="bg-white rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition-shadow animate-on-scroll">
-        <img src="https://readdy.ai/api/search-image?query=mature%20female%20teacher%20with%20kind%20expression%20in%20educational%20setting%20wearing%20professional%20attire%20caring%20atmosphere&width=300&height=400&seq=teacher3&orientation=portrait" 
-             alt="Öğretmen Zeynep" 
-             class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-        <h3 class="text-xl font-semibold mb-2">Zeynep Öğretmen</h3>
-        <p class="text-primary font-medium mb-2">Fiziksel Gelişim</p>
-        <p class="text-gray-600 text-sm">Beden eğitimi öğretmeni, çocuk jimnastiği uzmanı</p>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg animate-on-scroll">
+        <img src="img/anasinifi/anasinifi10.jpg"
+          alt='"Bu Dünya Bizim" yaklaşımı'
+          class="w-full h-48 sm:h-56 md:h-64 object-cover slide-in-down">
+        <div class="p-4 sm:p-6">
+          <h3 class="text-xl sm:text-2xl font-['Playfair_Display'] font-bold mb-2">"Bu Dünya Bizim" yaklaşımı</h3>
+          <p class="text-gray-600 text-sm sm:text-base">
+            Doğayı ve çevreyi koruma bilinci kazandırıyoruz.
+          </p>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
+
+
 
 <hr class="section-divider">
 
-<!-- İletişim ve Kayıt -->
-<section class="py-12 md:py-20 px-4 sm:px-6 md:px-8 bg-purple-light">
+<!-- Eceköy Galeri -->
+<section class="py-12 md:py-20 px-4 sm:px-6 md:px-8 bg-purple-pale">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-center text-3xl sm:text-4xl md:text-5xl font-['Playfair_Display'] font-bold mb-4">İletişim ve Kayıt</h2>
-    <p class="text-center text-gray-600 text-base sm:text-lg mb-8 md:mb-16">Çocuğunuzun geleceği için bizimle iletişime geçin</p>
-    
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-      <div class="space-y-6">
-        <h3 class="text-2xl font-semibold mb-6">İletişim Bilgileri</h3>
-        
-        <div class="flex items-center space-x-4">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-            <i class="ri-phone-line text-xl text-primary"></i>
-          </div>
-          <div>
-            <p class="font-semibold">Telefon</p>
-            <p class="text-gray-600">+90 (555) 123-4567</p>
-          </div>
-        </div>
-        
-        <div class="flex items-center space-x-4">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-            <i class="ri-mail-line text-xl text-primary"></i>
-          </div>
-          <div>
-            <p class="font-semibold">E-posta</p>
-            <p class="text-gray-600">anasinifi@kadinkooperatifi.org</p>
-          </div>
-        </div>
-        
-        <div class="flex items-center space-x-4">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-            <i class="ri-map-pin-line text-xl text-primary"></i>
-          </div>
-          <div>
-            <p class="font-semibold">Adres</p>
-            <p class="text-gray-600">123 Kooperatif Caddesi<br>Kadın Merkezi, TC 12345</p>
-          </div>
-        </div>
-        
-        <div class="flex items-center space-x-4">
-          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-            <i class="ri-time-line text-xl text-primary"></i>
-          </div>
-          <div>
-            <p class="font-semibold">Çalışma Saatleri</p>
-            <p class="text-gray-600">Pazartesi - Cuma: 08:00 - 16:00</p>
-          </div>
-        </div>
+    <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+      <blockquote class="text-xl sm:text-2xl md:text-3xl font-['Playfair_Display'] font-medium leading-relaxed mb-6 typewriter-text">
+        "Her çocuk, keşfetmeye ve hayal kurmaya değer bir dünyaya sahiptir. Anaokulumuzda her gün yeni bir macera başlar."
+      </blockquote>
+      <cite class="text-gray-600 text-sm sm:text-base">— Eceköy Anaokulu</cite>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/anasinifi/anasinifi2.jpg" alt="Village landscape" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
-      
-      <div class="bg-white rounded-lg p-6 md:p-8 shadow-lg">
-        <h3 class="text-2xl font-semibold mb-6">Kayıt Bilgileri</h3>
-        <ul class="space-y-4 text-gray-600">
-          <li class="flex items-start">
-            <i class="ri-check-line text-primary mr-3 mt-1"></i>
-            <span>3-6 yaş arası çocuklar kabul edilmektedir</span>
-          </li>
-          <li class="flex items-start">
-            <i class="ri-check-line text-primary mr-3 mt-1"></i>
-            <span>Sabah ve tam gün program seçenekleri</span>
-          </li>
-          <li class="flex items-start">
-            <i class="ri-check-line text-primary mr-3 mt-1"></i>
-            <span>Deneme günü imkanı</span>
-          </li>
-          <li class="flex items-start">
-            <i class="ri-check-line text-primary mr-3 mt-1"></i>
-            <span>Esnek ödeme seçenekleri</span>
-          </li>
-          <li class="flex items-start">
-            <i class="ri-check-line text-primary mr-3 mt-1"></i>
-            <span>Kayıt için sağlık raporu gereklidir</span>
-          </li>
-        </ul>
-        
-        <button class="w-full bg-primary text-white px-6 py-3 rounded-button font-semibold hover:bg-primary/90 transition-colors mt-6">
-          Kayıt Başvurusu
-        </button>
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/anasinifi/anasinifi3.jpg" alt="Women gardening" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/anasinifi/anasinifi4.jpg" alt="Fresh produce" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/anasinifi/anasinifi5.jpg" alt="Village house" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/anasinifi/anasinifi6.jpg" alt="Traditional farming" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/anasinifi/anasinifi11.jpg" alt="Community work" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/anasinifi/anasinifi12.jpg" alt="Natural products" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/5]">
+        <img src="img/anasinifi/anasinifi9.jpg" alt="Village life" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
       </div>
     </div>
   </div>
 </section>
+
+
+<script id="gallery-interactions">
+document.addEventListener('DOMContentLoaded', function() {
+  const galleryImages = document.querySelectorAll('.overflow-hidden.rounded-lg');
+  galleryImages.forEach(image => {
+    image.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.05)';
+      this.style.transition = 'transform 0.3s ease';
+    });
+    image.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1)';
+    });
+  });
+});
+</script>
+
+<hr class="section-divider">
 
 <!-- Footer -->
 <footer class="bg-secondary text-white py-8 md:py-12 lg:py-16 px-4 md:px-8">
   <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+      
+      <!-- LOGO VE AÇIKLAMA -->
       <div class="space-y-4 md:space-y-6 animate-on-scroll">
-        <div class="text-white font-['Pacifico'] text-2xl md:text-3xl mb-3 md:mb-4 fade-in-up">
-          Kadın Kooperatifi
+        <div class="mb-3 md:mb-4 fade-in-up">
+          <img src="BikafBeyazLogo.jpg" alt="Kadın Kooperatifi Logo" class="h-10 md:h-12 lg:h-14 object-contain">
         </div>
         <p class="text-white/80 leading-relaxed text-sm sm:text-base">
           Eğitim, el sanatları ve topluluk desteği ile değişimi güçlendiriyoruz. Birlikte, daha parlak bir gelecek için kalıcı etki yaratıyoruz.
         </p>
-        <div class="flex space-x-3 md:space-x-4">
-          <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-            <i class="ri-facebook-fill text-sm md:text-base"></i>
-          </a>
-          <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-            <i class="ri-twitter-fill text-sm md:text-base"></i>
-          </a>
-          <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-            <i class="ri-instagram-fill text-sm md:text-base"></i>
-          </a>
-          <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-            <i class="ri-linkedin-fill text-sm md:text-base"></i>
-          </a>
-        </div>
+      
       </div>
+
+      <!-- HIZLI BAĞLANTILAR -->
       <div class="space-y-6 animate-on-scroll">
         <h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 fade-in-left">Hızlı Bağlantılar</h3>
         <ul class="space-y-3">
           <li><a href="index.html" class="text-white/80 hover:text-white transition-colors">Ana Sayfa</a></li>
-          <li><a href="tarihimiz.html" class="text-white/80 hover:text-white transition-colors">Hakkımızda</a></li>
+          <li><a href="tarihimiz.html" class="text-white/80 hover:text-white transition-colors">Tarihimiz</a></li>
           <li><a href="galeri.html" class="text-white/80 hover:text-white transition-colors">Galeri</a></li>
-          <li><a href="lokanta.html" class="text-white/80 hover:text-white transition-colors">Lokanta</a></li>
-          <li><a href="iletisim.html" class="text-white/80 hover:text-white transition-colors">İletişim</a></li>
+          <li><a href="anasinifi.html" class="text-white/80 hover:text-white transition-colors">Özel Ana Okulu</a></li>
+          <li><a href="lokanta.html" class="text-white/80 hover:text-white transition-colors">BİKAD Mutfak</a></li>
+          <li><a href="ecekoy.html" class="text-white/80 hover:text-white transition-colors">Eceköy</a></li>
         </ul>
       </div>
-      <div class="space-y-6 animate-on-scroll">
-        <h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 fade-in-right">Programlarımız</h3>
-        <ul class="space-y-3">
-          <li><a href="anasinifi.html" class="text-white/80 hover:text-white transition-colors">Ana Sınıfı</a></li>
-          <li><a href="#" class="text-white/80 hover:text-white transition-colors">El Sanatları</a></li>
-          <li><a href="#" class="text-white/80 hover:text-white transition-colors">Topluluk Desteği</a></li>
-          <li><a href="#" class="text-white/80 hover:text-white transition-colors">Kadın Güçlendirme</a></li>
-          <li><a href="#" class="text-white/80 hover:text-white transition-colors">Beceri Geliştirme</a></li>
-        </ul>
-      </div>
+
+      <!-- İLETİŞİM BİLGİLERİ -->
       <div class="space-y-6 animate-on-scroll">
         <h3 class="text-xl font-['Playfair_Display'] font-semibold mb-4 bounce-in">İletişim Bilgileri</h3>
         <div class="space-y-4">
           <div class="flex items-center space-x-3">
             <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-              <i class="ri-map-pin-line text-primary"></i>
-            </div>
-            <div>
-              <p class="text-white/80 text-sm">123 Kooperatif Caddesi</p>
-              <p class="text-white/80 text-sm">Kadın Merkezi, TC 12345</p>
-            </div>
-          </div>
-          <div class="flex items-center space-x-3">
-            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
               <i class="ri-phone-line text-primary"></i>
             </div>
             <div>
-              <p class="text-white/80 text-sm">+90 (555) 123-4567</p>
+              <p class="text-white/80 text-sm">+90 541 686 00 98</p>
+            </div>
+          </div>
+            <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+               <i class="ri-phone-line text-primary"></i>
+            </div>
+            <div>
+              <p class="text-white/80 text-sm">286 316 00 67</p>
             </div>
           </div>
           <div class="flex items-center space-x-3">
             <div class="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-              <i class="ri-mail-line text-primary"></i>
+              <i class="ri-home-line text-primary"></i>
             </div>
             <div>
-              <p class="text-white/80 text-sm">info@kadinkooperatifi.org</p>
+              <p class="text-white/80 text-sm">Şirintepe Mah. Barış Manço Cad. No:4 Siteler/Biga
+</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="border-t border-white/20 pt-8">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="text-white/80 text-sm mb-4 md:mb-0 text-center md:text-left">
-          © 2024 Kadın Kooperatifi. Tüm hakları saklıdır.
-        </div>
-        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-sm text-center">
-          <a href="#" class="text-white/80 hover:text-white transition-colors">Gizlilik Politikası</a>
-          <a href="#" class="text-white/80 hover:text-white transition-colors">Kullanım Şartları</a>
-          <a href="#" class="text-white/80 hover:text-white transition-colors">Çerez Politikası</a>
-        </div>
-      </div>
+
+ <!-- ALT KISIM -->
+<div class="border-t border-white/20 pt-8">
+  <div class="flex justify-center items-center">
+    <div class="text-white/80 text-sm text-center">
+      © 2025 Kadın Kooperatifi. Tüm hakları saklıdır.
     </div>
   </div>
+</div>
+
 </footer>
+
+
 
 <!-- JavaScript -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Mobil menü
   const mobileMenuButton = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  
+
+  // Mobil dropdown
+  const dropdownBtn = document.getElementById('mobile-dropdown-btn');
+  const dropdownContent = document.getElementById('mobile-dropdown-content');
+  const dropdownArrow = document.getElementById('mobile-dropdown-arrow');
+
+  // Mobil menüyü aç/kapat
   if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', function() {
+    mobileMenuButton.addEventListener('click', function(event) {
       mobileMenu.classList.toggle('hidden');
+
+      // Icon değiştirme
+      const icon = mobileMenuButton.querySelector('i');
+      if (mobileMenu.classList.contains('hidden')) {
+        icon.className = 'ri-menu-line text-3xl';
+      } else {
+        icon.className = 'ri-close-line text-3xl';
+      }
     });
   }
 
-  // Scroll animations
+  // Mobil dropdown menü aç/kapat
+  if (dropdownBtn && dropdownContent) {
+    dropdownBtn.addEventListener('click', function(event) {
+      event.stopPropagation(); // Dışarı tıkla listener’ına takılmasın
+      dropdownContent.classList.toggle('hidden');
+      dropdownArrow.classList.toggle('rotate-180'); // arrow dönsün
+    });
+  }
+
+  // Dışarı tıklandığında menüyü ve dropdown'u kapat
+  document.addEventListener('click', function(event) {
+    if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+      mobileMenu.classList.add('hidden');
+      const icon = mobileMenuButton.querySelector('i');
+      icon.className = 'ri-menu-line text-3xl';
+    }
+    if (!dropdownBtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+      dropdownContent.classList.add('hidden');
+      dropdownArrow.classList.remove('rotate-180');
+    }
+  });
+
+  // Scroll animasyonları
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -764,7 +629,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (entry.isIntersecting) {
         entry.target.classList.add('animate');
         
-        const fadeElements = entry.target.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in, .slide-in-up, .slide-in-down, .bounce-in');
+        const fadeElements = entry.target.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in');
         fadeElements.forEach((el, index) => {
           setTimeout(() => {
             el.style.opacity = '1';
@@ -779,45 +644,45 @@ document.addEventListener('DOMContentLoaded', function() {
   animatedElements.forEach(el => {
     observer.observe(el);
   });
+
+  // Gallery filtreleme
+  const filterButtons = document.querySelectorAll('button');
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      filterButtons.forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-white');
+        btn.classList.add('bg-white', 'text-gray-600');
+      });
+      this.classList.remove('bg-white', 'text-gray-600');
+      this.classList.add('bg-primary', 'text-white');
+    });
+  });
 });
 
+// Navbar scroll animasyonu
 let lastScrollTop = 0;
 const navbar = document.querySelector('nav');
 let isScrollingDown = false;
 
 window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > lastScrollTop && !isScrollingDown && scrollTop > 100) {
-        // Aşağı scroll
-        navbar.style.transform = 'translateY(-100%)';
-        isScrollingDown = true;
-    } else if (scrollTop < lastScrollTop && isScrollingDown) {
-        // Yukarı scroll
-        navbar.style.transform = 'translateY(0)';
-        isScrollingDown = false;
-    }
-    
-    lastScrollTop = scrollTop;
-});
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-// Sayfanın en üstünde navbar'ı her zaman göster
-window.addEventListener('scroll', () => {
-    if (window.scrollY < 100) {
-        navbar.style.transform = 'translateY(0)';
-    }
-});
+  if (scrollTop > lastScrollTop && !isScrollingDown && scrollTop > 100) {
+      navbar.style.transform = 'translateY(-100%)';
+      isScrollingDown = true;
+  } else if (scrollTop < lastScrollTop && isScrollingDown) {
+      navbar.style.transform = 'translateY(0)';
+      isScrollingDown = false;
+  }
 
-// Scroll olduğunda navbar'ın şeffaflığını ayarla
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.classList.remove('bg-white/80');
-        navbar.classList.add('bg-white');
-    } else {
-        navbar.classList.remove('bg-white');
-        navbar.classList.add('bg-white/80');
-    }
+  // Sayfanın en üstünde navbar'ı her zaman göster
+  if (window.scrollY < 100) {
+      navbar.style.transform = 'translateY(0)';
+  }
+
+  lastScrollTop = scrollTop;
 });
 </script>
+
 </body>
 </html>
